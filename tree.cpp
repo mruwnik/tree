@@ -1,98 +1,112 @@
 #include "tree.h"
+#include "weather.h"
 
-int tree::budsnum = 2; 		// number of buds per node
-float tree::budAngle = 180; 	// angle of rotation between nodes (in degrees)
-float tree::branchAngle = 45; 	// angle between child branch and main branch (in degrees)
-float tree::segRad = 0.00002; 	// by how much should the radius of each brach grow
-float tree::segLen = 0.006; 		// by how much should each branch grow longer
-supplies tree::baseSegmentUse = supplies(1,0,1);
-supplies tree::segmentGrowthUse = supplies(1,0,1);
-hormones tree::segmentHormones = hormones(4,4);
-int tree::meristemTime = 194; 	// the amount of time (in hours) before a meristem produces a new section
+double timedilation = 4;
 
-int tree::budGrowthTime = 194; 	// the amount of time (in hours) before a bud is able to sprout
-supplies tree::budGrowthUse = supplies(1,2,2);
-supplies tree::budUse = supplies(1,0,1);
-hormones tree::budHormonesProd(1,0);
-hormones tree::budHormones = hormones(4,4);
+/* nice hacky way of making sure everything is rendered by the proper program */
+int tree::leafRenderRound = 1;
+int tree::renderRounds = 2;
 
-supplies tree::leafUse; 	// amount of supplies used by each leaf
-supplies tree::leafGrowth; 	// amount of supplies needed by each leaf to grow
-double tree::leafGrowBy = 1; 	// by how much (in %) a leaf grows
-double tree::leafMaxSize = 1; 	// max leaf size
+tree::tree(): s(780000,560,800), h(3,10,0){
+    init();
+    h.auxin = 3/timedilation;
+    trunk = new segment(NULL, params.getBaseSegmentUse() / timedilation);
+}
 
-tree::tree(): s(180,160,200), h(0,10){
+tree::tree(TreeParams param): s(780000,560,800), h(3,10,0), params(param){
 	init();
-	trunk = new meristem(NULL,baseSegmentUse);
+    h.auxin = 3/timedilation;
+    trunk = new segment(NULL, params.getBaseSegmentUse() / timedilation);
 }
 
 void tree::init(){
-	segment::setGrowth(segmentGrowthUse);
-	segment::setBudNum(budsnum);
-	segment::setBudAngle(budAngle);
-	segment::setBranchAngle(branchAngle);
-	segment::setRate(segLen,segRad);
-	segment::setUses(baseSegmentUse);
-	segment::setHormone(segmentHormones);
-	meristem::setGrowthTime(meristemTime);
-	meristem::setLenRate(segLen);
+	std::cout << "tree init: ";
+    params.init();
+	std::cout << "done" << std::endl;
+}
 
-	bud::setGrowthTime(budGrowthTime);
-	bud::setGrowth(budGrowthUse);
-	bud::setUse(budUse);
-	bud::setHormonesProd(budHormonesProd);
-	bud::setHormone(budHormones);
+void tree::initGraphics(){
+    leafTexture = leaf::readTexture("../resources/textures/leaf1.png");
+    barkTexture = leaf::readTexture("../resources/textures/bark.png");
 
-	leaf::setUses(tree::leafUse);
-	leaf::setSize(tree::leafMaxSize,tree::leafGrowBy);
+    segment::setTexture(barkTexture);
+
+	leaf::setTexture(leafTexture);
+    leaf::setTexture(leaf::readTexture("../resources/textures/leaf.png"));
+	leaf::setRenderingRound(tree::leafRenderRound);
+
+    leafShader = treeShader::shader("../resources/leaf.vert","../resources/leaf.frag");
+
+//	bud::setModel("bud.obj");
+}
+
+void tree::setParams(TreeParams params){
+    this->params = params;
+    this->params.init();
+}
+
+TreeParams tree::getParams(){
+    std::cout << "params: " << params.getBaseSegmentUse() << std::endl;
+    return params;
 }
 
 int tree::grow(){
 //	std::cout << "growing (" << s.water << "," <<  s.minerals << "," <<  s.sugar << ")" << std::endl;
 	trunk = trunk->grow(s,h);
+    return 0;
 }
 
-int tree::transport(){
-//	std::cout << "supplies: " << s << std::endl;
-	h = hormones(0,10);
-	s = supplies(180,160,200);
-	trunk = trunk->transport(s,h);
+int tree::transport(int times){
+    if(times < 0)
+        times = 0;
+    for(; times > 0; times--){
+        trunk = trunk->transport(s,h);
+
+        if(Weather::getTemp() < 5){
+            h.abscisicAcid = 1;
+        }else{
+            h.abscisicAcid = 0;
+            s.water = 300000000;
+            s.minerals = 300000000;
+            s.sugar = 3000000000;
+        }
+        h.auxin = 8;
+   }
+    return 0;
 }
 
-void tree::draw(){
-	int n = 5;
-	int m = 5;
-	float n2 = -(n/2.0);
-	float m2 = -(m/2.0);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+double tree::effect(hormones& h){
+	this->h = h;
+	return 0;
+}
 
-	glPushMatrix();
-//	GLfloat mat_amb_diff[] = { 0,1.0,0, 1.0 };
-//	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, 
-//			            mat_amb_diff);
-//	glColor3f(0,1.0,0);
-//	glRectf(-(n2),-(m2),n2,m2);
-//	glColor3f(1.0,1.0,1.0);
-//	mat_amb_diff[0]= 1.0;
-//	mat_amb_diff[2]= 1.0;
-//	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, 
-//			            mat_amb_diff);
+int tree::winter(){
+	hormones h = hormones(0, 0, 1);
+	trunk->transport(s, h);
+    return 0;
+}
 
-	glEnable(GL_BLEND);		// Enable Blending
-	glBegin (GL_QUADS);
-		glColor4f(0,0.5,0,1);
-		glNormal3f(0.0,0.0,1.0);
-		glVertex3f (-5, -5, 0);
-		glVertex3f (-5, m, 0);
-		glVertex3f (n, m, 0.0); 
-		glVertex3f (n, -5, 0.0);
-	glEnd();
-	
+void tree::draw(bool textured){
 //	glRotatef(-branchAngle, 0, 1, 0.0f); 
-	trunk->draw();
-	glDisable(GL_BLEND);
-	glPopMatrix();
-	glutSwapBuffers();
+	for(int i = 0; i < tree::renderRounds; i++){
+		glPushMatrix();
+		part::setRenderRound(i);
+        if(i){
+            leafShader.begin();
+            leaf::setupShader(leafShader);
+			trunk->draw();
+            leafShader.end();
+			glActiveTextureARB(GL_TEXTURE0_ARB);
+			glDisable(GL_TEXTURE_2D);
+
+	//		glActiveTextureARB(GL_TEXTURE1_ARB);
+	//		glDisable(GL_TEXTURE_2D);
+
+		}else{
+			trunk->draw();
+		}
+		glPopMatrix();
+	}
 
 //	std::cout << "current tree:" << std::endl;
 }
@@ -102,4 +116,7 @@ void tree::print(){
 	trunk->print();
 }
 
-tree::~tree(){}
+tree::~tree(){
+    if(trunk)
+        delete trunk;
+}

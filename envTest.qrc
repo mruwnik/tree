@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/envTest">
+        <file>leaf.vert</file>
+        <file>leaf.frag</file>
+    </qresource>
+    <qresource prefix="/textures">
+        <file>textures/bark.png</file>
+        <file>textures/bud1.png</file>
+        <file>textures/leaf.png</file>
+        <file>textures/leaf1.png</file>
+    </qresource>
+</RCC>
