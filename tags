@@ -1,0 +1,1056 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUD_H	bud.h	2;"	d
+CXX	Makefile	/^CXX = g++$/;"	m
+GLLOGGER_H	glLogger.h	2;"	d
+GLSLOADER_H	glsl.h	2;"	d
+Ka	objloader.h	/^	vertex Ka; 	\/\/ ambient colour$/;"	m	struct:material	access:public
+Kd	objloader.h	/^	vertex Kd; 	\/\/ difuse colour$/;"	m	struct:material	access:public
+Ks	objloader.h	/^	vertex Ks;  	\/\/ specular colour$/;"	m	struct:material	access:public
+LDFLAGS	Makefile	/^LDFLAGS = -lglut -lpng -Wall -ggdb -lGLEW$/;"	m
+LEAF_H	leaf.h	2;"	d
+MERISTEM_H	backup/meristem.h	2;"	d
+Ni	objloader.h	/^	double Ni; 	\/\/ optical density$/;"	m	struct:material	access:public
+Ns	objloader.h	/^	double Ns; 	\/\/ weight$/;"	m	struct:material	access:public
+OBJLOADER_H	objloader.h	2;"	d
+OBJS	Makefile	/^OBJS = parts.o segment.o bud.o glLogger.o glsl.o leaf.o main.o objloader.o texture.o tree.o$/;"	m
+PLANT_PART	parts.h	2;"	d
+SEGMENT_H	ringScar.h	2;"	d
+SEGMENT_H	segment.h	2;"	d
+SRCS	Makefile	/^SRCS = $(OBJS:.o=.cpp)$/;"	m
+TEXTURE_H	texture.h	2;"	d
+TEXTURE_LOAD_ERROR	texture.cpp	3;"	d	file:
+TREE_H	tree.h	2;"	d
+abscisicAcid	parts.h	/^	double abscisicAcid;$/;"	m	struct:hormones	access:public
+apex	ringScar.h	/^	part* apex; 			\/\/ the apex - can be anything really$/;"	m	class:ringScar	access:protected
+apex	segment.h	/^	part* apex; 			\/\/ the apex - can be anything really$/;"	m	class:segment	access:protected
+auxin	parts.h	/^	double auxin;$/;"	m	struct:hormones	access:public
+avgTemperature	main.cpp	/^const double avgTemperature = 10.0; \/\/ the avg temperature in this location$/;"	v
+b	glLogger.cpp	/^int glLogger::b = 0;$/;"	m	class:glLogger	file:
+b	glLogger.h	/^	static int b;$/;"	m	class:glLogger	access:private
+barkTexture	tree.h	/^	GLuint barkTexture;$/;"	m	class:tree	access:private
+baseLen	segment.h	/^const double baseLen = 0.2;$/;"	v
+baseRadius	segment.h	/^const double baseRadius = 0.1;$/;"	v
+baseSegmentUse	tree.cpp	/^supplies tree::baseSegmentUse = supplies(1,0,0);$/;"	m	class:tree	file:
+baseSegmentUse	tree.h	/^	static supplies baseSegmentUse;$/;"	m	class:tree	access:private
+begin	glsl.cpp	/^void shader::begin(){$/;"	f	class:shader	signature:()
+begin	glsl.h	/^		void begin();$/;"	p	class:treeShader::shader	access:public	signature:()
+branchAngle	segment.cpp	/^float segment::branchAngle = 0; $/;"	m	class:segment	file:
+branchAngle	segment.h	/^	static float branchAngle; 	\/\/ at what angle do branches go out relative the main branch$/;"	m	class:segment	access:protected
+branchAngle	tree.cpp	/^float tree::branchAngle = 30; 	\/\/ angle between child branch and main branch (in degrees)$/;"	m	class:tree	file:
+branchAngle	tree.h	/^	static float branchAngle; 	\/\/ angle between child branch and main branch (in degrees)$/;"	m	class:tree	access:private
+bud	bud.cpp	/^bud::bud(part* p, supplies u): part(p, u, bud::growth){$/;"	f	class:bud	signature:(part* p, supplies u)
+bud	bud.h	/^	bud(part* p,supplies u);$/;"	p	class:bud	access:public	signature:(part* p,supplies u)
+bud	bud.h	/^class bud : public part{$/;"	c	inherits:part
+bud::bud	bud.cpp	/^bud::bud(part* p, supplies u): part(p, u, bud::growth){$/;"	f	class:bud	signature:(part* p, supplies u)
+bud::bud	bud.h	/^	bud(part* p,supplies u);$/;"	p	class:bud	access:public	signature:(part* p,supplies u)
+bud::draw	bud.cpp	/^void bud::draw(){$/;"	f	class:bud	signature:()
+bud::draw	bud.h	/^	void draw();$/;"	p	class:bud	access:public	signature:()
+bud::drop	bud.h	/^	void drop(){};$/;"	f	class:bud	access:public	signature:()
+bud::dropLeaf	bud.cpp	/^void bud::dropLeaf(){$/;"	f	class:bud	signature:()
+bud::dropLeaf	bud.h	/^	void dropLeaf();$/;"	p	class:bud	access:public	signature:()
+bud::effect	bud.cpp	/^double bud::effect(hormones& h){$/;"	f	class:bud	signature:(hormones& h)
+bud::effect	bud.h	/^	double effect(hormones& h);$/;"	p	class:bud	access:public	signature:(hormones& h)
+bud::getEffect	bud.h	/^	static hormones getEffect(){return bud::hormonesEffect;}$/;"	f	class:bud	access:public	signature:()
+bud::getUse	bud.h	/^	static supplies getUse(){return bud::use;}$/;"	f	class:bud	access:public	signature:()
+bud::grow	bud.cpp	/^part* bud::grow(supplies& s, hormones& h){$/;"	f	class:bud	signature:(supplies& s, hormones& h)
+bud::grow	bud.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:bud	access:public	signature:(supplies& u, hormones& h)
+bud::growth	bud.h	/^	static supplies growth; \/\/ how much supplies needed to sprout$/;"	m	class:bud	access:protected
+bud::growthTime	bud.cpp	/^int bud::growthTime = 192;$/;"	m	class:bud	file:
+bud::growthTime	bud.h	/^	static int growthTime; 	\/\/ how long (in hours) before the bud is ready to sprout (that is is $/;"	m	class:bud	access:protected
+bud::hormonesEffect	bud.h	/^	static hormones hormonesEffect;$/;"	m	class:bud	access:protected
+bud::hormonesProd	bud.h	/^	static hormones hormonesProd;\/\/ how much auxin produced by each bud$/;"	m	class:bud	access:protected
+bud::l	bud.h	/^	leaf* l;$/;"	m	class:bud	access:protected
+bud::model	bud.cpp	/^mesh bud::model;$/;"	m	class:bud	file:
+bud::model	bud.h	/^	static mesh model; 		\/\/ contains the model of a bud$/;"	m	class:bud	access:protected
+bud::print	bud.cpp	/^void bud::print(){$/;"	f	class:bud	signature:()
+bud::print	bud.h	/^	void print();$/;"	p	class:bud	access:public	signature:()
+bud::setGrowth	bud.h	/^	static void setGrowth(supplies s){bud::growth = s;}$/;"	f	class:bud	access:public	signature:(supplies s)
+bud::setGrowthTime	bud.h	/^	static void setGrowthTime(int t){bud::growthTime = t;}$/;"	f	class:bud	access:public	signature:(int t)
+bud::setHormone	bud.cpp	/^void bud::setHormone(hormones h){$/;"	f	class:bud	signature:(hormones h)
+bud::setHormone	bud.h	/^	static void setHormone(hormones h);$/;"	p	class:bud	access:public	signature:(hormones h)
+bud::setHormonesProd	bud.h	/^	static void setHormonesProd(hormones a){bud::hormonesProd = a;}$/;"	f	class:bud	access:public	signature:(hormones a)
+bud::setModel	bud.h	/^	static void setModel(const char* f){bud::model.init(f,0.2);}$/;"	f	class:bud	access:public	signature:(const char* f)
+bud::setUse	bud.h	/^	static void setUse(supplies s){bud::use = s;}$/;"	f	class:bud	access:public	signature:(supplies s)
+bud::transport	bud.cpp	/^part* bud::transport(supplies& s, hormones& h){$/;"	f	class:bud	signature:(supplies& s, hormones& h)
+bud::transport	bud.h	/^	part* transport(supplies&, hormones& h);$/;"	p	class:bud	access:public	signature:(supplies&, hormones& h)
+bud::use	bud.cpp	/^supplies bud::use = supplies(1,0,1); 	\/\/ how much supplies used$/;"	m	class:bud	file:
+bud::use	bud.h	/^	static supplies use; 	\/\/ how much supplies used by a bud$/;"	m	class:bud	access:protected
+bud::~bud	bud.cpp	/^bud::~bud(){$/;"	f	class:bud	signature:()
+bud::~bud	bud.h	/^	~bud();$/;"	p	class:bud	access:public	signature:()
+budAngle	segment.cpp	/^float segment::budAngle = 0; $/;"	m	class:segment	file:
+budAngle	segment.h	/^	static float budAngle; 		\/\/ at what angle do the buds pop out relative to the previous node$/;"	m	class:segment	access:protected
+budAngle	tree.cpp	/^float tree::budAngle = 0; 	\/\/ angle of rotation between nodes (in degrees)$/;"	m	class:tree	file:
+budAngle	tree.h	/^	static float budAngle; 		\/\/ angle of rotation between nodes (in degrees)$/;"	m	class:tree	access:private
+budGrowthTime	tree.cpp	/^int tree::budGrowthTime = 194; 	\/\/ the amount of time (in hours) before a bud is able to sprout$/;"	m	class:tree	file:
+budGrowthTime	tree.h	/^	static int budGrowthTime; 	\/\/ the amount of time (in hours) before a bud is able to sprout$/;"	m	class:tree	access:private
+budGrowthUse	tree.cpp	/^supplies tree::budGrowthUse = supplies(1,2,1);$/;"	m	class:tree	file:
+budGrowthUse	tree.h	/^	static supplies budGrowthUse; 	\/\/ amount of supplies needed by a bud to sprout$/;"	m	class:tree	access:private
+budHormones	tree.cpp	/^hormones tree::budHormones = hormones(4,4,0);$/;"	m	class:tree	file:
+budHormones	tree.h	/^	static hormones budHormones; 		\/\/ the influence of various hormones$/;"	m	class:tree	access:private
+budHormonesProd	tree.h	/^	static hormones budHormonesProd; 		\/\/ how much auxin is produced by each bud$/;"	m	class:tree	access:private
+budUse	tree.cpp	/^supplies tree::budUse = supplies(1,0,0);$/;"	m	class:tree	file:
+budUse	tree.h	/^	static supplies budUse; 	\/\/ the amount of supplies used by a bud to survive$/;"	m	class:tree	access:private
+budnum	segment.cpp	/^int segment::budnum = 2; 	\/\/ the amount of buds at each node $/;"	m	class:segment	file:
+budnum	segment.h	/^	static int budnum; 		\/\/ the amount of buds at each node $/;"	m	class:segment	access:protected
+buds	segment.h	/^	part** buds; 			\/\/ a list of buds at the end of this node$/;"	m	class:segment	access:protected
+budsnum	tree.cpp	/^int tree::budsnum = 2; 		\/\/ number of buds per node$/;"	m	class:tree	file:
+budsnum	tree.h	/^	static int budsnum; 		\/\/ number of buds per node$/;"	m	class:tree	access:private
+changeSize	main.cpp	/^void changeSize(int w, int h){$/;"	f	signature:(int w, int h)
+colour	leaf.h	/^	double colour[3];$/;"	m	class:leaf	access:protected
+conductivity	parts.h	/^	supplies conductivity; \/\/ how much supplies can be transported by this part. not really sure how to use it properly$/;"	m	class:part	access:protected
+contents	glLogger.cpp	/^std::string glLogger::contents = std::string();$/;"	m	class:glLogger	file:
+contents	glLogger.h	/^	static std::string contents;$/;"	m	class:glLogger	access:private
+currentTime	main.cpp	/^int currentTime = 80*24; 		\/\/ the current time, in hours, counted since the beginning of the year$/;"	v
+d	objloader.h	/^	double d; 	\/\/ transparency$/;"	m	struct:material	access:public
+deltaTemp	main.cpp	/^const double deltaTemp = 20.0; 	\/\/ the difference between hot summer and cold winter$/;"	v
+devAngle	parts.h	/^	double devAngle;$/;"	m	class:part	access:protected
+die	leaf.cpp	/^void leaf::die(){$/;"	f	class:leaf	signature:()
+die	leaf.h	/^	void die();$/;"	p	class:leaf	access:public	signature:()
+die	parts.cpp	/^void part::die(){$/;"	f	class:part	signature:()
+die	parts.h	/^	virtual void die();$/;"	p	class:part	access:public	signature:()
+die	ringScar.cpp	/^void ringScar::die(){$/;"	f	class:ringScar	signature:()
+die	ringScar.h	/^	void die();$/;"	p	class:ringScar	access:public	signature:()
+die	segment.cpp	/^void segment::die(){$/;"	f	class:segment	signature:()
+die	segment.h	/^	void die();$/;"	p	class:segment	access:public	signature:()
+draw	bud.cpp	/^void bud::draw(){$/;"	f	class:bud	signature:()
+draw	bud.h	/^	void draw();$/;"	p	class:bud	access:public	signature:()
+draw	leaf.cpp	/^void leaf::draw(){$/;"	f	class:leaf	signature:()
+draw	leaf.h	/^	void draw();$/;"	p	class:leaf	access:public	signature:()
+draw	objloader.cpp	/^void mesh::draw(){$/;"	f	class:mesh	signature:()
+draw	objloader.cpp	/^void object::draw(){}$/;"	f	class:object	signature:()
+draw	objloader.h	/^	void draw();$/;"	p	class:mesh	access:public	signature:()
+draw	objloader.h	/^	void draw();$/;"	p	class:object	access:public	signature:()
+draw	parts.h	/^	virtual void draw()=0;$/;"	p	class:part	access:public	signature:()
+draw	ringScar.cpp	/^void ringScar::draw(){$/;"	f	class:ringScar	signature:()
+draw	ringScar.h	/^	void draw();$/;"	p	class:ringScar	access:public	signature:()
+draw	segment.cpp	/^void segment::draw(){$/;"	f	class:segment	signature:()
+draw	segment.h	/^	void draw();$/;"	p	class:segment	access:public	signature:()
+draw	tree.cpp	/^void tree::draw(bool textured){$/;"	f	class:tree	signature:(bool textured)
+draw	tree.h	/^	void draw(bool textured = true);$/;"	p	class:tree	access:public	signature:(bool textured = true)
+drawGL	objloader.cpp	/^void texCoord::drawGL(){$/;"	f	class:texCoord	signature:()
+drawGL	objloader.cpp	/^void vertex::drawGL(){$/;"	f	class:vertex	signature:()
+drawGL	objloader.h	/^	void drawGL();$/;"	p	struct:texCoord	access:public	signature:()
+drawGL	objloader.h	/^	void drawGL();$/;"	p	struct:vertex	access:public	signature:()
+drop	bud.h	/^	void drop(){};$/;"	f	class:bud	access:public	signature:()
+drop	leaf.cpp	/^void leaf::drop(){}$/;"	f	class:leaf	signature:()
+drop	leaf.h	/^	void drop();$/;"	p	class:leaf	access:public	signature:()
+drop	parts.h	/^	virtual void drop()=0;$/;"	p	class:part	access:public	signature:()
+drop	segment.h	/^	void drop(){};$/;"	f	class:segment	access:public	signature:()
+dropLeaf	bud.cpp	/^void bud::dropLeaf(){$/;"	f	class:bud	signature:()
+dropLeaf	bud.h	/^	void dropLeaf();$/;"	p	class:bud	access:public	signature:()
+effect	bud.cpp	/^double bud::effect(hormones& h){$/;"	f	class:bud	signature:(hormones& h)
+effect	bud.h	/^	double effect(hormones& h);$/;"	p	class:bud	access:public	signature:(hormones& h)
+effect	leaf.cpp	/^double leaf::effect(hormones& h){$/;"	f	class:leaf	signature:(hormones& h)
+effect	leaf.h	/^	double effect(hormones& h); \/\/ used to change this part with a hormone$/;"	p	class:leaf	access:public	signature:(hormones& h)
+effect	parts.cpp	/^double part::effect(hormones& h){$/;"	f	class:part	signature:(hormones& h)
+effect	parts.cpp	/^double part::effect(hormones& h, hormones& effect, hormones& produce){$/;"	f	class:part	signature:(hormones& h, hormones& effect, hormones& produce)
+effect	parts.h	/^	virtual double effect(hormones& h); \/\/ used to change this part with a hormone$/;"	p	class:part	access:public	signature:(hormones& h)
+effect	parts.h	/^	virtual double effect(hormones& h, hormones& effect, hormones& produce);$/;"	p	class:part	access:public	signature:(hormones& h, hormones& effect, hormones& produce)
+effect	tree.cpp	/^double tree::effect(hormones& h){$/;"	f	class:tree	signature:(hormones& h)
+effect	tree.h	/^	double effect(hormones& h); \/\/ used to change this part with a hormone$/;"	p	class:tree	access:public	signature:(hormones& h)
+end	glsl.cpp	/^void shader::end(){$/;"	f	class:shader	signature:()
+end	glsl.h	/^		void end();$/;"	p	class:treeShader::shader	access:public	signature:()
+feed	parts.cpp	/^int part::feed(supplies& s){$/;"	f	class:part	signature:(supplies& s)
+feed	parts.h	/^	virtual int feed(supplies& s); 	\/\/ sends supplies to this part$/;"	p	class:part	access:public	signature:(supplies& s)
+font	glLogger.cpp	/^void* glLogger::font = GLUT_BITMAP_TIMES_ROMAN_10;$/;"	m	class:glLogger	file:
+font	glLogger.h	/^	static void* font;$/;"	m	class:glLogger	access:private
+fragmentShader	glsl.h	/^		GLuint fragmentShader;$/;"	m	class:treeShader::shader	access:private
+g	glLogger.cpp	/^int glLogger::g = 0;$/;"	m	class:glLogger	file:
+g	glLogger.h	/^	static int g;$/;"	m	class:glLogger	access:private
+g	main.cpp	/^double g = 5;$/;"	v
+getConductivity	parts.cpp	/^supplies part::getConductivity(){$/;"	f	class:part	signature:()
+getConductivity	parts.h	/^	virtual supplies getConductivity();$/;"	p	class:part	access:public	signature:()
+getEffect	bud.h	/^	static hormones getEffect(){return bud::hormonesEffect;}$/;"	f	class:bud	access:public	signature:()
+getHealth	parts.h	/^	double getHealth(){return health;}$/;"	f	class:part	access:public	signature:()
+getMaterialIndex	objloader.cpp	/^int mesh::getMaterialIndex(std::string name){$/;"	f	class:mesh	signature:(std::string name)
+getMaterialIndex	objloader.h	/^	int getMaterialIndex(std::string name);$/;"	p	class:mesh	access:public	signature:(std::string name)
+getMaterials	objloader.cpp	/^void mesh::getMaterials(const char* name){$/;"	f	class:mesh	signature:(const char* name)
+getMaterials	objloader.h	/^	void getMaterials(const char* name);$/;"	p	class:mesh	access:public	signature:(const char* name)
+getPixelShader	glsl.h	/^		GLuint getPixelShader(){return fragmentShader;}$/;"	f	class:treeShader::shader	access:public	signature:()
+getProgram	glsl.h	/^		GLuint getProgram(){return program;}$/;"	f	class:treeShader::shader	access:public	signature:()
+getRenderRound	parts.h	/^	static int getRenderRound(){return part::renderRound;}$/;"	f	class:part	access:public	signature:()
+getRenderingRound	leaf.h	/^	static int getRenderingRound(){return leaf::renderingRound;}$/;"	f	class:leaf	access:public	signature:()
+getTexturesAmount	leaf.h	/^	static int getTexturesAmount(){return leaf::textures;}$/;"	f	class:leaf	access:public	signature:()
+getTimestampInms	glLogger.cpp	/^long glLogger::getTimestampInms(){$/;"	f	class:glLogger	signature:()
+getTimestampInms	glLogger.h	/^	static long getTimestampInms();$/;"	p	class:glLogger	access:public	signature:()
+getTimestampInus	glLogger.cpp	/^long glLogger::getTimestampInus(){$/;"	f	class:glLogger	signature:()
+getTimestampInus	glLogger.h	/^	static long getTimestampInus();$/;"	p	class:glLogger	access:public	signature:()
+getUse	bud.h	/^	static supplies getUse(){return bud::use;}$/;"	f	class:bud	access:public	signature:()
+getUses	leaf.h	/^	static supplies getUses(){ return leaf::use; }$/;"	f	class:leaf	access:public	signature:()
+getUses	segment.h	/^	static supplies getUses(){return segment::segmentUses;}$/;"	f	class:segment	access:public	signature:()
+getVertexShader	glsl.h	/^		GLuint getVertexShader(){return vertexShader;}$/;"	f	class:treeShader::shader	access:public	signature:()
+glLogger	glLogger.h	/^class glLogger{$/;"	c
+glLogger::b	glLogger.cpp	/^int glLogger::b = 0;$/;"	m	class:glLogger	file:
+glLogger::b	glLogger.h	/^	static int b;$/;"	m	class:glLogger	access:private
+glLogger::contents	glLogger.cpp	/^std::string glLogger::contents = std::string();$/;"	m	class:glLogger	file:
+glLogger::contents	glLogger.h	/^	static std::string contents;$/;"	m	class:glLogger	access:private
+glLogger::font	glLogger.cpp	/^void* glLogger::font = GLUT_BITMAP_TIMES_ROMAN_10;$/;"	m	class:glLogger	file:
+glLogger::font	glLogger.h	/^	static void* font;$/;"	m	class:glLogger	access:private
+glLogger::g	glLogger.cpp	/^int glLogger::g = 0;$/;"	m	class:glLogger	file:
+glLogger::g	glLogger.h	/^	static int g;$/;"	m	class:glLogger	access:private
+glLogger::getTimestampInms	glLogger.cpp	/^long glLogger::getTimestampInms(){$/;"	f	class:glLogger	signature:()
+glLogger::getTimestampInms	glLogger.h	/^	static long getTimestampInms();$/;"	p	class:glLogger	access:public	signature:()
+glLogger::getTimestampInus	glLogger.cpp	/^long glLogger::getTimestampInus(){$/;"	f	class:glLogger	signature:()
+glLogger::getTimestampInus	glLogger.h	/^	static long getTimestampInus();$/;"	p	class:glLogger	access:public	signature:()
+glLogger::lineHeight	glLogger.cpp	/^float glLogger::lineHeight = 10;$/;"	m	class:glLogger	file:
+glLogger::lineHeight	glLogger.h	/^	static float lineHeight;$/;"	m	class:glLogger	access:private
+glLogger::print	glLogger.cpp	/^char* glLogger::print(const char* str){$/;"	f	class:glLogger	signature:(const char* str)
+glLogger::print	glLogger.cpp	/^std::string& glLogger::print(const std::string& str){$/;"	f	class:glLogger	signature:(const std::string& str)
+glLogger::print	glLogger.h	/^	static char* print(const char* str);$/;"	p	class:glLogger	access:public	signature:(const char* str)
+glLogger::print	glLogger.h	/^	static std::string& print(const std::string& str);$/;"	p	class:glLogger	access:public	signature:(const std::string& str)
+glLogger::printText	glLogger.cpp	/^void glLogger::printText(float x, float y, const char* str){$/;"	f	class:glLogger	signature:(float x, float y, const char* str)
+glLogger::printText	glLogger.cpp	/^void glLogger::printText(float x, float y, int r, int g, int b, const char* str){$/;"	f	class:glLogger	signature:(float x, float y, int r, int g, int b, const char* str)
+glLogger::printText	glLogger.h	/^	static void printText(float x, float y, const char* str);$/;"	p	class:glLogger	access:public	signature:(float x, float y, const char* str)
+glLogger::printText	glLogger.h	/^	static void printText(float x, float y, int r, int g, int b, const char* str);$/;"	p	class:glLogger	access:public	signature:(float x, float y, int r, int g, int b, const char* str)
+glLogger::println	glLogger.cpp	/^char* glLogger::println(const char* str){$/;"	f	class:glLogger	signature:(const char* str)
+glLogger::println	glLogger.cpp	/^std::string& glLogger::println(const std::string& str){$/;"	f	class:glLogger	signature:(const std::string& str)
+glLogger::println	glLogger.h	/^	static char* println(const char* str);$/;"	p	class:glLogger	access:public	signature:(const char* str)
+glLogger::println	glLogger.h	/^	static std::string& println(const std::string& str);$/;"	p	class:glLogger	access:public	signature:(const std::string& str)
+glLogger::putNum	glLogger.cpp	/^void glLogger::putNum(double number){$/;"	f	class:glLogger	signature:(double number)
+glLogger::putNum	glLogger.cpp	/^void glLogger::putNum(long number){$/;"	f	class:glLogger	signature:(long number)
+glLogger::putNum	glLogger.h	/^	static void putNum(double c);$/;"	p	class:glLogger	access:public	signature:(double c)
+glLogger::putNum	glLogger.h	/^	static void putNum(long c);$/;"	p	class:glLogger	access:public	signature:(long c)
+glLogger::putchar	glLogger.cpp	/^char glLogger::putchar(const char c){$/;"	f	class:glLogger	signature:(const char c)
+glLogger::putchar	glLogger.h	/^	static char putchar(const char c);$/;"	p	class:glLogger	access:public	signature:(const char c)
+glLogger::r	glLogger.cpp	/^int glLogger::r = 0;$/;"	m	class:glLogger	file:
+glLogger::r	glLogger.h	/^	static int r;$/;"	m	class:glLogger	access:private
+glLogger::render	glLogger.cpp	/^int glLogger::render(bool clear){$/;"	f	class:glLogger	signature:(bool clear)
+glLogger::render	glLogger.h	/^	static int render(bool clear = true);$/;"	p	class:glLogger	access:public	signature:(bool clear = true)
+glLogger::setColour	glLogger.cpp	/^void glLogger::setColour(int r, int g, int b){$/;"	f	class:glLogger	signature:(int r, int g, int b)
+glLogger::setColour	glLogger.h	/^	static void setColour(int r, int g, int b);$/;"	p	class:glLogger	access:public	signature:(int r, int g, int b)
+glLogger::setFont	glLogger.cpp	/^void glLogger::setFont(void* font){$/;"	f	class:glLogger	signature:(void* font)
+glLogger::setFont	glLogger.h	/^	static void setFont(void* font);$/;"	p	class:glLogger	access:public	signature:(void* font)
+grow	backup/meristem.cpp	/^part* meristem::grow(supplies& s,hormones& h){$/;"	f	class:meristem	signature:(supplies& s,hormones& h)
+grow	backup/meristem.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:meristem	access:public	signature:(supplies& u, hormones& h)
+grow	bud.cpp	/^part* bud::grow(supplies& s, hormones& h){$/;"	f	class:bud	signature:(supplies& s, hormones& h)
+grow	bud.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:bud	access:public	signature:(supplies& u, hormones& h)
+grow	leaf.cpp	/^leaf* leaf::grow(supplies& s, hormones& h){$/;"	f	class:leaf	signature:(supplies& s, hormones& h)
+grow	leaf.h	/^	leaf* grow(supplies& s, hormones& h); 	\/\/ sends supplies to this leaf$/;"	p	class:leaf	access:public	signature:(supplies& s, hormones& h)
+grow	parts.h	/^	virtual part* grow(supplies& s, hormones& h)=0; 	\/\/ causes this part to grow$/;"	p	class:part	access:public	signature:(supplies& s, hormones& h)
+grow	ringScar.cpp	/^part* ringScar::grow(supplies& s,hormones& h){$/;"	f	class:ringScar	signature:(supplies& s,hormones& h)
+grow	ringScar.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:ringScar	access:public	signature:(supplies& u, hormones& h)
+grow	segment.cpp	/^part* segment::grow(supplies& s,hormones& h){$/;"	f	class:segment	signature:(supplies& s,hormones& h)
+grow	segment.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:segment	access:public	signature:(supplies& u, hormones& h)
+grow	tree.cpp	/^int tree::grow(){$/;"	f	class:tree	signature:()
+grow	tree.h	/^	int grow();$/;"	p	class:tree	access:public	signature:()
+growBy	leaf.cpp	/^double leaf::growBy = 1; 	 	\/\/ defines by how much (in %) a leaf grows$/;"	m	class:leaf	file:
+growBy	leaf.h	/^	static double growBy;  	\/\/ defines by how much a leaf grows$/;"	m	class:leaf	access:protected
+grown	parts.h	/^	void grown(){state = 2;}$/;"	f	class:part	access:public	signature:()
+growth	backup/meristem.cpp	/^supplies meristem::growth = supplies(1,1,1); \/\/ how much supplies needed to grow$/;"	m	class:meristem	file:
+growth	backup/meristem.h	/^	static supplies growth; 	\/\/ how much supplies needed to grow$/;"	m	class:meristem	access:protected
+growth	bud.h	/^	static supplies growth; \/\/ how much supplies needed to sprout$/;"	m	class:bud	access:protected
+growth	leaf.cpp	/^supplies leaf::growth = supplies(1,2,1); \/\/ defines how much supplies a leaf needs to grow$/;"	m	class:leaf	file:
+growth	leaf.h	/^	static supplies growth; \/\/ defines how much supplies a leaf needs to grow$/;"	m	class:leaf	access:protected
+growth	parts.h	/^	double growth;$/;"	m	struct:hormones	access:public
+growth	segment.h	/^	static supplies growth; 	\/\/ how much supplies needed to grow$/;"	m	class:segment	access:protected
+growthTime	backup/meristem.cpp	/^int meristem::growthTime = 192; 	\/\/ how fast each meristem grows longer in optimal conditions$/;"	m	class:meristem	file:
+growthTime	backup/meristem.h	/^	static int growthTime; 		\/\/ how long (in hours) before a new segment is produced$/;"	m	class:meristem	access:protected
+growthTime	bud.cpp	/^int bud::growthTime = 192;$/;"	m	class:bud	file:
+growthTime	bud.h	/^	static int growthTime; 	\/\/ how long (in hours) before the bud is ready to sprout (that is is $/;"	m	class:bud	access:protected
+growthTime	segment.cpp	/^int segment::growthTime = 0; 	\/\/ for how many units should a segment grow for before it sprouts a new segment$/;"	m	class:segment	file:
+growthTime	segment.h	/^	static int growthTime; 		\/\/ for how many units should a segment grow for before it sprouts a new segment$/;"	m	class:segment	access:protected
+h	main.cpp	/^int w,h;$/;"	v
+h	tree.h	/^	hormones h;$/;"	m	class:tree	access:private
+hangle	main.cpp	/^double hangle = 0;$/;"	v
+health	parts.h	/^	double health; 	\/\/ the health of this part, in percentiles. 0 is dead, 1000 means that this part is $/;"	m	class:part	access:protected
+horm	parts.h	/^	hormones horm;$/;"	m	class:part	access:protected
+hormones	parts.cpp	/^hormones::hormones(): auxin(0), growth(0), abscisicAcid(0){}$/;"	f	class:hormones	signature:()
+hormones	parts.cpp	/^hormones::hormones(double a, double g, double aA): auxin(a), growth(g), abscisicAcid(aA){}$/;"	f	class:hormones	signature:(double a, double g, double aA)
+hormones	parts.h	/^	hormones();$/;"	p	struct:hormones	access:public	signature:()
+hormones	parts.h	/^	hormones(double a, double g, double aA);$/;"	p	struct:hormones	access:public	signature:(double a, double g, double aA)
+hormones	parts.h	/^struct hormones{$/;"	s
+hormones::abscisicAcid	parts.h	/^	double abscisicAcid;$/;"	m	struct:hormones	access:public
+hormones::auxin	parts.h	/^	double auxin;$/;"	m	struct:hormones	access:public
+hormones::growth	parts.h	/^	double growth;$/;"	m	struct:hormones	access:public
+hormones::hormones	parts.cpp	/^hormones::hormones(): auxin(0), growth(0), abscisicAcid(0){}$/;"	f	class:hormones	signature:()
+hormones::hormones	parts.cpp	/^hormones::hormones(double a, double g, double aA): auxin(a), growth(g), abscisicAcid(aA){}$/;"	f	class:hormones	signature:(double a, double g, double aA)
+hormones::hormones	parts.h	/^	hormones();$/;"	p	struct:hormones	access:public	signature:()
+hormones::hormones	parts.h	/^	hormones(double a, double g, double aA);$/;"	p	struct:hormones	access:public	signature:(double a, double g, double aA)
+hormones::operator *	parts.cpp	/^hormones hormones::operator*(const double d){$/;"	f	class:hormones	signature:(const double d)
+hormones::operator *	parts.h	/^	hormones operator*(const double d);$/;"	p	struct:hormones	access:public	signature:(const double d)
+hormones::operator +	parts.cpp	/^hormones hormones::operator+(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+hormones::operator +	parts.h	/^	hormones operator+(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+hormones::operator +=	parts.cpp	/^hormones& hormones::operator+=(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+hormones::operator +=	parts.h	/^	hormones& operator+=(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+hormones::operator -	parts.cpp	/^hormones hormones::operator-(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+hormones::operator -	parts.h	/^	hormones operator-(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+hormones::operator -=	parts.h	/^	hormones& operator-=(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+hormones::operator /	parts.cpp	/^hormones hormones::operator\/(const double d){$/;"	f	class:hormones	signature:(const double d)
+hormones::operator /	parts.h	/^	hormones operator\/(const double d);$/;"	p	struct:hormones	access:public	signature:(const double d)
+hormones::operator <	parts.cpp	/^bool hormones::operator<(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+hormones::operator <	parts.h	/^	bool operator<(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+hormones::operator <<	parts.h	/^	friend std::ostream& operator<<(std::ostream& output, const hormones& s);$/;"	p	struct:hormones	access:friend	signature:(std::ostream& output, const hormones& s)
+hormones::operator >	parts.cpp	/^bool hormones::operator>(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+hormones::operator >	parts.h	/^	bool operator>(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+hormonesEffect	bud.h	/^	static hormones hormonesEffect;$/;"	m	class:bud	access:protected
+hormonesEffect	segment.h	/^	static hormones hormonesEffect; \/\/ the optimal amount of hormones for growth$/;"	m	class:segment	access:protected
+hormonesMin	segment.h	/^	static hormones hormonesMin; 	\/\/ the min amount of hormones for growth$/;"	m	class:segment	access:protected
+hormonesProd	bud.h	/^	static hormones hormonesProd;\/\/ how much auxin produced by each bud$/;"	m	class:bud	access:protected
+hormonesProd	segment.h	/^	static hormones hormonesProd; 	\/\/ how much hormones are produced$/;"	m	class:segment	access:protected
+illum	objloader.h	/^	int illum;$/;"	m	struct:material	access:public
+indexedTriangle	objloader.cpp	/^indexedTriangle::indexedTriangle(){$/;"	f	class:indexedTriangle	signature:()
+indexedTriangle	objloader.cpp	/^indexedTriangle::indexedTriangle(long v1, long t1, long v2, long t2, long v3, long t3){$/;"	f	class:indexedTriangle	signature:(long v1, long t1, long v2, long t2, long v3, long t3)
+indexedTriangle	objloader.cpp	/^indexedTriangle::indexedTriangle(long v1, long v2, long v3){$/;"	f	class:indexedTriangle	signature:(long v1, long v2, long v3)
+indexedTriangle	objloader.h	/^	indexedTriangle();$/;"	p	struct:indexedTriangle	access:public	signature:()
+indexedTriangle	objloader.h	/^	indexedTriangle(long v1, long t1, long v2, long t2, long v3, long t3);$/;"	p	struct:indexedTriangle	access:public	signature:(long v1, long t1, long v2, long t2, long v3, long t3)
+indexedTriangle	objloader.h	/^	indexedTriangle(long v1, long v2, long v3);$/;"	p	struct:indexedTriangle	access:public	signature:(long v1, long v2, long v3)
+indexedTriangle	objloader.h	/^struct indexedTriangle{$/;"	s
+indexedTriangle::indexedTriangle	objloader.cpp	/^indexedTriangle::indexedTriangle(){$/;"	f	class:indexedTriangle	signature:()
+indexedTriangle::indexedTriangle	objloader.cpp	/^indexedTriangle::indexedTriangle(long v1, long t1, long v2, long t2, long v3, long t3){$/;"	f	class:indexedTriangle	signature:(long v1, long t1, long v2, long t2, long v3, long t3)
+indexedTriangle::indexedTriangle	objloader.cpp	/^indexedTriangle::indexedTriangle(long v1, long v2, long v3){$/;"	f	class:indexedTriangle	signature:(long v1, long v2, long v3)
+indexedTriangle::indexedTriangle	objloader.h	/^	indexedTriangle();$/;"	p	struct:indexedTriangle	access:public	signature:()
+indexedTriangle::indexedTriangle	objloader.h	/^	indexedTriangle(long v1, long t1, long v2, long t2, long v3, long t3);$/;"	p	struct:indexedTriangle	access:public	signature:(long v1, long t1, long v2, long t2, long v3, long t3)
+indexedTriangle::indexedTriangle	objloader.h	/^	indexedTriangle(long v1, long v2, long v3);$/;"	p	struct:indexedTriangle	access:public	signature:(long v1, long v2, long v3)
+indexedTriangle::materialIndex	objloader.h	/^	int materialIndex;$/;"	m	struct:indexedTriangle	access:public
+indexedTriangle::normals	objloader.h	/^	vertex normals[3];$/;"	m	struct:indexedTriangle	access:public
+indexedTriangle::texCoords	objloader.h	/^	long texCoords[3];$/;"	m	struct:indexedTriangle	access:public
+indexedTriangle::vertexes	objloader.h	/^	long vertexes[3];$/;"	m	struct:indexedTriangle	access:public
+init	main.cpp	/^void init(int argc, char** argv){$/;"	f	signature:(int argc, char** argv)
+init	objloader.cpp	/^void mesh::init(const char* file, double scale){$/;"	f	class:mesh	signature:(const char* file, double scale)
+init	objloader.h	/^	void init(const char* file, double scale = 1);$/;"	p	class:mesh	access:public	signature:(const char* file, double scale = 1)
+init	tree.cpp	/^void tree::init(){$/;"	f	class:tree	signature:()
+init	tree.h	/^	void init();$/;"	p	class:tree	access:public	signature:()
+initGraphics	tree.cpp	/^void tree::initGraphics(){$/;"	f	class:tree	signature:()
+initGraphics	tree.h	/^	void initGraphics();$/;"	p	class:tree	access:public	signature:()
+initialised	objloader.h	/^	bool initialised;$/;"	m	class:mesh	access:private
+isDead	parts.h	/^	bool isDead(){return state == 0; }$/;"	f	class:part	access:public	signature:()
+isGrown	parts.h	/^	bool isGrown(){return state == 2;}$/;"	f	class:part	access:public	signature:()
+isInitialised	objloader.h	/^	bool isInitialised(){return initialised;}$/;"	f	class:mesh	access:public	signature:()
+keyPressed	main.cpp	/^void keyPressed (unsigned char key, int x, int y) {  $/;"	f	signature:(unsigned char key, int x, int y)
+l	bud.h	/^	leaf* l;$/;"	m	class:bud	access:protected
+leaf	leaf.cpp	/^leaf::leaf(part* p, supplies u): part(p,u, leaf::growth), size(0.1), remainingPetioleStr(100){$/;"	f	class:leaf	signature:(part* p, supplies u)
+leaf	leaf.h	/^	leaf(part* p,supplies u);$/;"	p	class:leaf	access:public	signature:(part* p,supplies u)
+leaf	leaf.h	/^class leaf : public  part{$/;"	c	inherits:part
+leaf::colour	leaf.h	/^	double colour[3];$/;"	m	class:leaf	access:protected
+leaf::die	leaf.cpp	/^void leaf::die(){$/;"	f	class:leaf	signature:()
+leaf::die	leaf.h	/^	void die();$/;"	p	class:leaf	access:public	signature:()
+leaf::draw	leaf.cpp	/^void leaf::draw(){$/;"	f	class:leaf	signature:()
+leaf::draw	leaf.h	/^	void draw();$/;"	p	class:leaf	access:public	signature:()
+leaf::drop	leaf.cpp	/^void leaf::drop(){}$/;"	f	class:leaf	signature:()
+leaf::drop	leaf.h	/^	void drop();$/;"	p	class:leaf	access:public	signature:()
+leaf::effect	leaf.cpp	/^double leaf::effect(hormones& h){$/;"	f	class:leaf	signature:(hormones& h)
+leaf::effect	leaf.h	/^	double effect(hormones& h); \/\/ used to change this part with a hormone$/;"	p	class:leaf	access:public	signature:(hormones& h)
+leaf::getRenderingRound	leaf.h	/^	static int getRenderingRound(){return leaf::renderingRound;}$/;"	f	class:leaf	access:public	signature:()
+leaf::getTexturesAmount	leaf.h	/^	static int getTexturesAmount(){return leaf::textures;}$/;"	f	class:leaf	access:public	signature:()
+leaf::getUses	leaf.h	/^	static supplies getUses(){ return leaf::use; }$/;"	f	class:leaf	access:public	signature:()
+leaf::grow	leaf.cpp	/^leaf* leaf::grow(supplies& s, hormones& h){$/;"	f	class:leaf	signature:(supplies& s, hormones& h)
+leaf::grow	leaf.h	/^	leaf* grow(supplies& s, hormones& h); 	\/\/ sends supplies to this leaf$/;"	p	class:leaf	access:public	signature:(supplies& s, hormones& h)
+leaf::growBy	leaf.cpp	/^double leaf::growBy = 1; 	 	\/\/ defines by how much (in %) a leaf grows$/;"	m	class:leaf	file:
+leaf::growBy	leaf.h	/^	static double growBy;  	\/\/ defines by how much a leaf grows$/;"	m	class:leaf	access:protected
+leaf::growth	leaf.cpp	/^supplies leaf::growth = supplies(1,2,1); \/\/ defines how much supplies a leaf needs to grow$/;"	m	class:leaf	file:
+leaf::growth	leaf.h	/^	static supplies growth; \/\/ defines how much supplies a leaf needs to grow$/;"	m	class:leaf	access:protected
+leaf::leaf	leaf.cpp	/^leaf::leaf(part* p, supplies u): part(p,u, leaf::growth), size(0.1), remainingPetioleStr(100){$/;"	f	class:leaf	signature:(part* p, supplies u)
+leaf::leaf	leaf.h	/^	leaf(part* p,supplies u);$/;"	p	class:leaf	access:public	signature:(part* p,supplies u)
+leaf::maxSize	leaf.cpp	/^double leaf::maxSize = 1;$/;"	m	class:leaf	file:
+leaf::maxSize	leaf.h	/^	static double maxSize; 	\/\/ max size of a leaf$/;"	m	class:leaf	access:protected
+leaf::print	leaf.cpp	/^void leaf::print(){$/;"	f	class:leaf	signature:()
+leaf::print	leaf.h	/^	void print();$/;"	p	class:leaf	access:public	signature:()
+leaf::readTexture	leaf.cpp	/^GLuint leaf::readTexture(const char* file){$/;"	f	class:leaf	signature:(const char* file)
+leaf::readTexture	leaf.h	/^	static GLuint readTexture(const char* file);$/;"	p	class:leaf	access:public	signature:(const char* file)
+leaf::remainingPetioleStr	leaf.h	/^	double remainingPetioleStr; \/\/ strength of the petiole in %. when it reaches 0 the leaf drops$/;"	m	class:leaf	access:protected
+leaf::renderingRound	leaf.cpp	/^int leaf::renderingRound = 1;$/;"	m	class:leaf	file:
+leaf::renderingRound	leaf.h	/^	static int renderingRound; \/\/ defines on which render round leaves should be rendered$/;"	m	class:leaf	access:protected
+leaf::setGrowth	leaf.h	/^	static void setGrowth(supplies s){ leaf::growth = s; }$/;"	f	class:leaf	access:public	signature:(supplies s)
+leaf::setRenderingRound	leaf.h	/^	static void setRenderingRound(int r){leaf::renderingRound = r;}$/;"	f	class:leaf	access:public	signature:(int r)
+leaf::setSize	leaf.h	/^	static void setSize(double s, double g){ leaf::maxSize = s; leaf::growBy = s*g\/100; }$/;"	f	class:leaf	access:public	signature:(double s, double g)
+leaf::setSugarProduced	leaf.h	/^	static void setSugarProduced(double s){leaf::sugarProduced = s;}$/;"	f	class:leaf	access:public	signature:(double s)
+leaf::setTexture	leaf.cpp	/^int leaf::setTexture(GLuint t,signed int i){$/;"	f	class:leaf	signature:(GLuint t,signed int i)
+leaf::setTexture	leaf.h	/^	static int setTexture(GLuint t,signed int i = -1);$/;"	p	class:leaf	access:public	signature:(GLuint t,signed int i = -1)
+leaf::setUses	leaf.h	/^	static void setUses(supplies s){ leaf::use = s; }$/;"	f	class:leaf	access:public	signature:(supplies s)
+leaf::setupShader	leaf.cpp	/^int leaf::setupShader(treeShader::shader& s){$/;"	f	class:leaf	signature:(treeShader::shader& s)
+leaf::setupShader	leaf.h	/^	static int setupShader(treeShader::shader& s);$/;"	p	class:leaf	access:public	signature:(treeShader::shader& s)
+leaf::size	leaf.h	/^	double size; 		\/\/ size of leaf in %. 100% is the max. size of a leaf$/;"	m	class:leaf	access:protected
+leaf::sugarProduced	leaf.cpp	/^double leaf::sugarProduced = 2;$/;"	m	class:leaf	file:
+leaf::sugarProduced	leaf.h	/^	static double sugarProduced; \/\/ defines how much sugar a fully developed leaf produces$/;"	m	class:leaf	access:protected
+leaf::texture	leaf.cpp	/^GLuint leaf::texture[10];$/;"	m	class:leaf	file:
+leaf::texture	leaf.h	/^	static GLuint texture[10]; 	\/\/ leaf textures$/;"	m	class:leaf	access:protected
+leaf::textures	leaf.cpp	/^GLuint leaf::textures = 0;$/;"	m	class:leaf	file:
+leaf::textures	leaf.h	/^	static GLuint textures; 	\/\/ amount of leaf texture$/;"	m	class:leaf	access:protected
+leaf::transport	leaf.cpp	/^leaf* leaf::transport(supplies& s, hormones& h){$/;"	f	class:leaf	signature:(supplies& s, hormones& h)
+leaf::transport	leaf.h	/^	leaf* transport(supplies& s, hormones& h);$/;"	p	class:leaf	access:public	signature:(supplies& s, hormones& h)
+leaf::use	leaf.cpp	/^supplies leaf::use = supplies(3,1,0);  	\/\/ defines how much supplies a leaf needs to survive$/;"	m	class:leaf	file:
+leaf::use	leaf.h	/^	static supplies use; 	\/\/ defines how much supplies a leaf needs to survive$/;"	m	class:leaf	access:protected
+leafGrowBy	tree.cpp	/^double tree::leafGrowBy = 1; 	\/\/ by how much (in %) a leaf grows$/;"	m	class:tree	file:
+leafGrowBy	tree.h	/^	static double leafGrowBy; 	\/\/ by how much (in %) a leaf grows$/;"	m	class:tree	access:private
+leafGrowth	tree.cpp	/^supplies tree::leafGrowth = supplies(1, 1, 1); 	\/\/ amount of supplies needed by each leaf to grow$/;"	m	class:tree	file:
+leafGrowth	tree.h	/^	static supplies leafGrowth; 	\/\/ amount of supplies needed by each leaf to grow$/;"	m	class:tree	access:private
+leafMaxSize	tree.cpp	/^double tree::leafMaxSize = 1; 	\/\/ max leaf size$/;"	m	class:tree	file:
+leafMaxSize	tree.h	/^	static double leafMaxSize; 	\/\/ max size of a leaf$/;"	m	class:tree	access:private
+leafRenderRound	tree.cpp	/^int tree::leafRenderRound = 1;$/;"	m	class:tree	file:
+leafRenderRound	tree.h	/^	static int leafRenderRound; 	\/\/ round when leaves should be rendered$/;"	m	class:tree	access:private
+leafShader	tree.h	/^	treeShader::shader leafShader;$/;"	m	class:tree	access:private
+leafSugarProduced	tree.cpp	/^double tree::leafSugarProduced = 2.5;$/;"	m	class:tree	file:
+leafSugarProduced	tree.h	/^	static double leafSugarProduced;\/\/ how much sugar is produced by a fully grown, healthy leaf$/;"	m	class:tree	access:private
+leafTexture	tree.h	/^	GLuint leafTexture;$/;"	m	class:tree	access:private
+leafUse	tree.cpp	/^supplies tree::leafUse = supplies(4, 1, 0); 	\/\/ amount of supplies used by each leaf$/;"	m	class:tree	file:
+leafUse	tree.h	/^	static supplies leafUse; 	\/\/ amount of supplies used by each leaf$/;"	m	class:tree	access:private
+lenRate	backup/meristem.cpp	/^float meristem::lenRate = 0.26; 	\/\/ how fast each meristem grows longer in optimal conditions$/;"	m	class:meristem	file:
+lenRate	backup/meristem.h	/^	static float lenRate; 		\/\/ how fast each meristem grows longer in optimal conditions$/;"	m	class:meristem	access:protected
+lenRate	segment.cpp	/^float segment::lenRate = 0; 	\/\/ how fast each segment grows longer in optimal conditions$/;"	m	class:segment	file:
+lenRate	segment.h	/^	static float lenRate; 		\/\/ how fast each segment grows longer in optimal conditions$/;"	m	class:segment	access:protected
+length	segment.h	/^	float length;$/;"	m	class:segment	access:protected
+lineHeight	glLogger.cpp	/^float glLogger::lineHeight = 10;$/;"	m	class:glLogger	file:
+lineHeight	glLogger.h	/^	static float lineHeight;$/;"	m	class:glLogger	access:private
+listIndex	objloader.h	/^	GLuint listIndex;$/;"	m	class:mesh	access:private
+load	glsl.cpp	/^GLuint shader::load(GLenum type, const char *filename){ 	\/\/ loads a shader. type says what kind (vertex or fragment)$/;"	f	class:shader	signature:(GLenum type, const char *filename)
+load	glsl.h	/^		GLuint load(GLenum type, const char *filename); 	\/\/ loads a shader. type says what kind (vertex or fragment)$/;"	p	class:treeShader::shader	access:public	signature:(GLenum type, const char *filename)
+loadPixelShader	glsl.cpp	/^GLuint shader::loadPixelShader(const char* filename, bool link){$/;"	f	class:shader	signature:(const char* filename, bool link)
+loadPixelShader	glsl.h	/^		GLuint loadPixelShader(const char* filename, bool link = false);$/;"	p	class:treeShader::shader	access:public	signature:(const char* filename, bool link = false)
+loadTexture	texture.cpp	/^ GLuint loadTexture(const string filename, int &width, int &height) $/;"	f	signature:(const string filename, int &width, int &height)
+loadTexture	texture.h	/^GLuint loadTexture(const std::string filename, int &width, int &height); $/;"	p	signature:(const std::string filename, int &width, int &height)
+loadVertexShader	glsl.cpp	/^GLuint shader::loadVertexShader(const char* filename, bool link){$/;"	f	class:shader	signature:(const char* filename, bool link)
+loadVertexShader	glsl.h	/^		GLuint loadVertexShader(const char* filename, bool link = false);$/;"	p	class:treeShader::shader	access:public	signature:(const char* filename, bool link = false)
+main	main.cpp	/^int main(int argc, char** argv){$/;"	f	signature:(int argc, char** argv)
+mainLoop	main.cpp	/^void mainLoop(int i){$/;"	f	signature:(int i)
+makeList	objloader.cpp	/^GLuint mesh::makeList(){$/;"	f	class:mesh	signature:()
+makeList	objloader.h	/^	GLuint makeList();$/;"	p	class:mesh	access:public	signature:()
+makeProgram	glsl.cpp	/^GLuint shader::makeProgram(GLuint vShader, GLuint pShader){$/;"	f	class:shader	signature:(GLuint vShader, GLuint pShader)
+makeProgram	glsl.h	/^		GLuint makeProgram(GLuint vShader, GLuint pShader);$/;"	p	class:treeShader::shader	access:public	signature:(GLuint vShader, GLuint pShader)
+map_Ka	objloader.h	/^	GLuint map_Ka; 	\/\/ the ambient texture map$/;"	m	struct:material	access:public
+map_Kd	objloader.h	/^	GLuint map_Kd; 	\/\/ the diffuse texture map (most of the time, it will$/;"	m	struct:material	access:public
+map_Ks	objloader.h	/^	GLuint map_Ks; 	\/\/ the specular texture map$/;"	m	struct:material	access:public
+map_bump	objloader.h	/^	GLuint map_bump; 	\/\/ the bump map$/;"	m	struct:material	access:public
+map_d	objloader.h	/^	GLuint map_d; 	\/\/ the alpha texture map$/;"	m	struct:material	access:public
+material	objloader.h	/^struct material{$/;"	s
+material::Ka	objloader.h	/^	vertex Ka; 	\/\/ ambient colour$/;"	m	struct:material	access:public
+material::Kd	objloader.h	/^	vertex Kd; 	\/\/ difuse colour$/;"	m	struct:material	access:public
+material::Ks	objloader.h	/^	vertex Ks;  	\/\/ specular colour$/;"	m	struct:material	access:public
+material::Ni	objloader.h	/^	double Ni; 	\/\/ optical density$/;"	m	struct:material	access:public
+material::Ns	objloader.h	/^	double Ns; 	\/\/ weight$/;"	m	struct:material	access:public
+material::d	objloader.h	/^	double d; 	\/\/ transparency$/;"	m	struct:material	access:public
+material::illum	objloader.h	/^	int illum;$/;"	m	struct:material	access:public
+material::map_Ka	objloader.h	/^	GLuint map_Ka; 	\/\/ the ambient texture map$/;"	m	struct:material	access:public
+material::map_Kd	objloader.h	/^	GLuint map_Kd; 	\/\/ the diffuse texture map (most of the time, it will$/;"	m	struct:material	access:public
+material::map_Ks	objloader.h	/^	GLuint map_Ks; 	\/\/ the specular texture map$/;"	m	struct:material	access:public
+material::map_bump	objloader.h	/^	GLuint map_bump; 	\/\/ the bump map$/;"	m	struct:material	access:public
+material::map_d	objloader.h	/^	GLuint map_d; 	\/\/ the alpha texture map$/;"	m	struct:material	access:public
+material::name	objloader.h	/^	std::string name;$/;"	m	struct:material	access:public
+materialIndex	objloader.h	/^	int materialIndex;$/;"	m	struct:indexedTriangle	access:public
+materials	objloader.h	/^	material* materials;$/;"	m	class:mesh	access:private
+materialsnum	objloader.h	/^	int materialsnum;$/;"	m	class:mesh	access:private
+max	main.cpp	/^int max = 700;$/;"	v
+maxSize	leaf.cpp	/^double leaf::maxSize = 1;$/;"	m	class:leaf	file:
+maxSize	leaf.h	/^	static double maxSize; 	\/\/ max size of a leaf$/;"	m	class:leaf	access:protected
+meristem	backup/meristem.cpp	/^meristem::meristem(part* p, supplies u): segment(p, u){$/;"	f	class:meristem	signature:(part* p, supplies u)
+meristem	backup/meristem.h	/^	meristem(part* p,supplies u);$/;"	p	class:meristem	access:public	signature:(part* p,supplies u)
+meristem	backup/meristem.h	/^class meristem : public segment{$/;"	c	inherits:segment
+meristem::grow	backup/meristem.cpp	/^part* meristem::grow(supplies& s,hormones& h){$/;"	f	class:meristem	signature:(supplies& s,hormones& h)
+meristem::grow	backup/meristem.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:meristem	access:public	signature:(supplies& u, hormones& h)
+meristem::growth	backup/meristem.cpp	/^supplies meristem::growth = supplies(1,1,1); \/\/ how much supplies needed to grow$/;"	m	class:meristem	file:
+meristem::growth	backup/meristem.h	/^	static supplies growth; 	\/\/ how much supplies needed to grow$/;"	m	class:meristem	access:protected
+meristem::growthTime	backup/meristem.cpp	/^int meristem::growthTime = 192; 	\/\/ how fast each meristem grows longer in optimal conditions$/;"	m	class:meristem	file:
+meristem::growthTime	backup/meristem.h	/^	static int growthTime; 		\/\/ how long (in hours) before a new segment is produced$/;"	m	class:meristem	access:protected
+meristem::lenRate	backup/meristem.cpp	/^float meristem::lenRate = 0.26; 	\/\/ how fast each meristem grows longer in optimal conditions$/;"	m	class:meristem	file:
+meristem::lenRate	backup/meristem.h	/^	static float lenRate; 		\/\/ how fast each meristem grows longer in optimal conditions$/;"	m	class:meristem	access:protected
+meristem::meristem	backup/meristem.cpp	/^meristem::meristem(part* p, supplies u): segment(p, u){$/;"	f	class:meristem	signature:(part* p, supplies u)
+meristem::meristem	backup/meristem.h	/^	meristem(part* p,supplies u);$/;"	p	class:meristem	access:public	signature:(part* p,supplies u)
+meristem::setGrowth	backup/meristem.h	/^	static void setGrowth(supplies s){ meristem::growth = s;}$/;"	f	class:meristem	access:public	signature:(supplies s)
+meristem::setGrowthTime	backup/meristem.h	/^	static void setGrowthTime(int t){ meristem::growthTime = t;}$/;"	f	class:meristem	access:public	signature:(int t)
+meristem::setLenRate	backup/meristem.h	/^	static void setLenRate(float l){ meristem::lenRate = l;}$/;"	f	class:meristem	access:public	signature:(float l)
+meristem::transport	backup/meristem.cpp	/^part* meristem::transport(supplies& s, hormones& h){$/;"	f	class:meristem	signature:(supplies& s, hormones& h)
+meristem::transport	backup/meristem.h	/^	part* transport(supplies& s, hormones& h);$/;"	p	class:meristem	access:public	signature:(supplies& s, hormones& h)
+meristem::~meristem	backup/meristem.cpp	/^meristem::~meristem(){$/;"	f	class:meristem	signature:()
+meristem::~meristem	backup/meristem.h	/^	~meristem();$/;"	p	class:meristem	access:public	signature:()
+meristemTime	tree.cpp	/^int tree::meristemTime = 194; 	\/\/ the amount of time before a meristem grows a new segment$/;"	m	class:tree	file:
+meristemTime	tree.h	/^	static int meristemTime; 	\/\/ the amount of time (in hours) before a meristem produces a new section$/;"	m	class:tree	access:private
+mesh	objloader.cpp	/^mesh::mesh(){$/;"	f	class:mesh	signature:()
+mesh	objloader.h	/^	mesh();$/;"	p	class:mesh	access:public	signature:()
+mesh	objloader.h	/^class mesh{$/;"	c
+mesh::draw	objloader.cpp	/^void mesh::draw(){$/;"	f	class:mesh	signature:()
+mesh::draw	objloader.h	/^	void draw();$/;"	p	class:mesh	access:public	signature:()
+mesh::getMaterialIndex	objloader.cpp	/^int mesh::getMaterialIndex(std::string name){$/;"	f	class:mesh	signature:(std::string name)
+mesh::getMaterialIndex	objloader.h	/^	int getMaterialIndex(std::string name);$/;"	p	class:mesh	access:public	signature:(std::string name)
+mesh::getMaterials	objloader.cpp	/^void mesh::getMaterials(const char* name){$/;"	f	class:mesh	signature:(const char* name)
+mesh::getMaterials	objloader.h	/^	void getMaterials(const char* name);$/;"	p	class:mesh	access:public	signature:(const char* name)
+mesh::init	objloader.cpp	/^void mesh::init(const char* file, double scale){$/;"	f	class:mesh	signature:(const char* file, double scale)
+mesh::init	objloader.h	/^	void init(const char* file, double scale = 1);$/;"	p	class:mesh	access:public	signature:(const char* file, double scale = 1)
+mesh::initialised	objloader.h	/^	bool initialised;$/;"	m	class:mesh	access:private
+mesh::isInitialised	objloader.h	/^	bool isInitialised(){return initialised;}$/;"	f	class:mesh	access:public	signature:()
+mesh::listIndex	objloader.h	/^	GLuint listIndex;$/;"	m	class:mesh	access:private
+mesh::makeList	objloader.cpp	/^GLuint mesh::makeList(){$/;"	f	class:mesh	signature:()
+mesh::makeList	objloader.h	/^	GLuint makeList();$/;"	p	class:mesh	access:public	signature:()
+mesh::materials	objloader.h	/^	material* materials;$/;"	m	class:mesh	access:private
+mesh::materialsnum	objloader.h	/^	int materialsnum;$/;"	m	class:mesh	access:private
+mesh::mesh	objloader.cpp	/^mesh::mesh(){$/;"	f	class:mesh	signature:()
+mesh::mesh	objloader.h	/^	mesh();$/;"	p	class:mesh	access:public	signature:()
+mesh::objectnum	objloader.h	/^	unsigned long objectnum;$/;"	m	class:mesh	access:private
+mesh::objects	objloader.h	/^	object* objects;$/;"	m	class:mesh	access:private
+mesh::print	objloader.cpp	/^void mesh::print(){}$/;"	f	class:mesh	signature:()
+mesh::print	objloader.h	/^	void print();$/;"	p	class:mesh	access:public	signature:()
+mesh::texCoordnum	objloader.h	/^	unsigned long texCoordnum;$/;"	m	class:mesh	access:private
+mesh::texCoords	objloader.h	/^	texCoord* texCoords;$/;"	m	class:mesh	access:private
+mesh::trianglenum	objloader.h	/^	unsigned long trianglenum;$/;"	m	class:mesh	access:private
+mesh::triangles	objloader.h	/^	indexedTriangle* triangles;$/;"	m	class:mesh	access:private
+mesh::vertexes	objloader.h	/^	vertex* vertexes;$/;"	m	class:mesh	access:private
+mesh::vertexnum	objloader.h	/^	unsigned long vertexnum;$/;"	m	class:mesh	access:private
+mesh::~mesh	objloader.cpp	/^mesh::~mesh(){$/;"	f	class:mesh	signature:()
+mesh::~mesh	objloader.h	/^	~mesh();$/;"	p	class:mesh	access:public	signature:()
+minerals	parts.h	/^	double minerals;$/;"	m	struct:supplies	access:public
+model	bud.cpp	/^mesh bud::model;$/;"	m	class:bud	file:
+model	bud.h	/^	static mesh model; 		\/\/ contains the model of a bud$/;"	m	class:bud	access:protected
+mouse	main.cpp	/^void mouse(int button,int state,int x1, int y1){$/;"	f	signature:(int button,int state,int x1, int y1)
+mouseMoved	main.cpp	/^void mouseMoved(int X, int Y){$/;"	f	signature:(int X, int Y)
+name	objloader.h	/^	std::string name;$/;"	m	class:object	access:private
+name	objloader.h	/^	std::string name;$/;"	m	struct:material	access:public
+normalise	parts.cpp	/^supplies supplies::normalise(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+normalise	parts.h	/^	supplies normalise(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+normals	objloader.h	/^	vertex normals[3];$/;"	m	struct:indexedTriangle	access:public
+object	objloader.cpp	/^object::object(std::string& n, vertex* v, long vnum, texCoord* t, long tnum):$/;"	f	class:object	signature:(std::string& n, vertex* v, long vnum, texCoord* t, long tnum)
+object	objloader.h	/^	object(std::string& n, vertex* v, long vnum, texCoord* t, long tnum);$/;"	p	class:object	access:public	signature:(std::string& n, vertex* v, long vnum, texCoord* t, long tnum)
+object	objloader.h	/^class object{$/;"	c
+object::draw	objloader.cpp	/^void object::draw(){}$/;"	f	class:object	signature:()
+object::draw	objloader.h	/^	void draw();$/;"	p	class:object	access:public	signature:()
+object::name	objloader.h	/^	std::string name;$/;"	m	class:object	access:private
+object::object	objloader.cpp	/^object::object(std::string& n, vertex* v, long vnum, texCoord* t, long tnum):$/;"	f	class:object	signature:(std::string& n, vertex* v, long vnum, texCoord* t, long tnum)
+object::object	objloader.h	/^	object(std::string& n, vertex* v, long vnum, texCoord* t, long tnum);$/;"	p	class:object	access:public	signature:(std::string& n, vertex* v, long vnum, texCoord* t, long tnum)
+object::print	objloader.cpp	/^void object::print(){}$/;"	f	class:object	signature:()
+object::print	objloader.h	/^	void print();$/;"	p	class:object	access:public	signature:()
+object::texCoordnum	objloader.h	/^	long texCoordnum;$/;"	m	class:object	access:private
+object::texCoords	objloader.h	/^	texCoord* texCoords;$/;"	m	class:object	access:private
+object::vertexes	objloader.h	/^	vertex* vertexes;$/;"	m	class:object	access:private
+object::vertexnum	objloader.h	/^	long vertexnum;$/;"	m	class:object	access:private
+objectnum	objloader.h	/^	unsigned long objectnum;$/;"	m	class:mesh	access:private
+objects	objloader.h	/^	object* objects;$/;"	m	class:mesh	access:private
+operator *	objloader.cpp	/^vertex& vertex::operator*(double num){$/;"	f	class:vertex	signature:(double num)
+operator *	objloader.h	/^	vertex& operator*(double num);$/;"	p	struct:vertex	access:public	signature:(double num)
+operator *	parts.cpp	/^hormones hormones::operator*(const double d){$/;"	f	class:hormones	signature:(const double d)
+operator *	parts.cpp	/^supplies supplies::operator*(const double d){$/;"	f	class:supplies	signature:(const double d)
+operator *	parts.h	/^	hormones operator*(const double d);$/;"	p	struct:hormones	access:public	signature:(const double d)
+operator *	parts.h	/^	supplies operator*(const double d);$/;"	p	struct:supplies	access:public	signature:(const double d)
+operator +	parts.cpp	/^hormones hormones::operator+(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+operator +	parts.cpp	/^supplies supplies::operator+(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+operator +	parts.h	/^	hormones operator+(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+operator +	parts.h	/^	supplies operator+(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+operator +=	parts.cpp	/^hormones& hormones::operator+=(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+operator +=	parts.cpp	/^supplies& supplies::operator+=(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+operator +=	parts.h	/^	hormones& operator+=(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+operator +=	parts.h	/^	supplies& operator+=(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+operator -	parts.cpp	/^hormones hormones::operator-(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+operator -	parts.cpp	/^supplies supplies::operator-(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+operator -	parts.h	/^	hormones operator-(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+operator -	parts.h	/^	supplies operator-(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+operator -=	parts.cpp	/^supplies& supplies::operator-=(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+operator -=	parts.h	/^	hormones& operator-=(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+operator -=	parts.h	/^	supplies& operator-=(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+operator /	parts.cpp	/^hormones hormones::operator\/(const double d){$/;"	f	class:hormones	signature:(const double d)
+operator /	parts.cpp	/^supplies supplies::operator\/(const double d){$/;"	f	class:supplies	signature:(const double d)
+operator /	parts.cpp	/^supplies supplies::operator\/(const supplies& a){$/;"	f	class:supplies	signature:(const supplies& a)
+operator /	parts.h	/^	hormones operator\/(const double d);$/;"	p	struct:hormones	access:public	signature:(const double d)
+operator /	parts.h	/^	supplies operator\/(const double d);$/;"	p	struct:supplies	access:public	signature:(const double d)
+operator /	parts.h	/^	supplies operator\/(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+operator <	parts.cpp	/^bool hormones::operator<(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+operator <	parts.cpp	/^bool supplies::operator<(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+operator <	parts.h	/^	bool operator<(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+operator <	parts.h	/^	bool operator<(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+operator <<	parts.cpp	/^std::ostream& operator<<(std::ostream& output, const hormones& s){$/;"	f	signature:(std::ostream& output, const hormones& s)
+operator <<	parts.cpp	/^std::ostream& operator<<(std::ostream& output, const supplies& s){$/;"	f	signature:(std::ostream& output, const supplies& s)
+operator <<	parts.h	/^	friend std::ostream& operator<<(std::ostream& output, const hormones& s);$/;"	p	struct:hormones	access:friend	signature:(std::ostream& output, const hormones& s)
+operator <<	parts.h	/^	friend std::ostream& operator<<(std::ostream& output, const supplies& s);$/;"	p	struct:supplies	access:friend	signature:(std::ostream& output, const supplies& s)
+operator >	parts.cpp	/^bool hormones::operator>(const hormones& h){$/;"	f	class:hormones	signature:(const hormones& h)
+operator >	parts.cpp	/^bool supplies::operator>(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+operator >	parts.h	/^	bool operator>(const hormones& h);$/;"	p	struct:hormones	access:public	signature:(const hormones& h)
+operator >	parts.h	/^	bool operator>(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+parent	parts.h	/^	part* parent; 	\/\/ pointer to the parent branch$/;"	m	class:part	access:protected
+parseTex	objloader.cpp	/^texCoord parseTex(std::string& line){$/;"	f	signature:(std::string& line)
+parseTriangle	objloader.cpp	/^indexedTriangle parseTriangle(std::string& line){$/;"	f	signature:(std::string& line)
+parseVertex	objloader.cpp	/^vertex parseVertex(std::string line, int start = 2){$/;"	f	signature:(std::string line, int start = 2)
+part	parts.cpp	/^part::part(part* p, supplies u, supplies g): parent(p), uses(u), horm(hormones(0,0,0)), togrow(0),$/;"	f	class:part	signature:(part* p, supplies u, supplies g)
+part	parts.h	/^	part(part* p,supplies u, supplies g);$/;"	p	class:part	access:public	signature:(part* p,supplies u, supplies g)
+part	parts.h	/^class part{$/;"	c
+part::conductivity	parts.h	/^	supplies conductivity; \/\/ how much supplies can be transported by this part. not really sure how to use it properly$/;"	m	class:part	access:protected
+part::devAngle	parts.h	/^	double devAngle;$/;"	m	class:part	access:protected
+part::die	parts.cpp	/^void part::die(){$/;"	f	class:part	signature:()
+part::die	parts.h	/^	virtual void die();$/;"	p	class:part	access:public	signature:()
+part::draw	parts.h	/^	virtual void draw()=0;$/;"	p	class:part	access:public	signature:()
+part::drop	parts.h	/^	virtual void drop()=0;$/;"	p	class:part	access:public	signature:()
+part::effect	parts.cpp	/^double part::effect(hormones& h){$/;"	f	class:part	signature:(hormones& h)
+part::effect	parts.cpp	/^double part::effect(hormones& h, hormones& effect, hormones& produce){$/;"	f	class:part	signature:(hormones& h, hormones& effect, hormones& produce)
+part::effect	parts.h	/^	virtual double effect(hormones& h); \/\/ used to change this part with a hormone$/;"	p	class:part	access:public	signature:(hormones& h)
+part::effect	parts.h	/^	virtual double effect(hormones& h, hormones& effect, hormones& produce);$/;"	p	class:part	access:public	signature:(hormones& h, hormones& effect, hormones& produce)
+part::feed	parts.cpp	/^int part::feed(supplies& s){$/;"	f	class:part	signature:(supplies& s)
+part::feed	parts.h	/^	virtual int feed(supplies& s); 	\/\/ sends supplies to this part$/;"	p	class:part	access:public	signature:(supplies& s)
+part::getConductivity	parts.cpp	/^supplies part::getConductivity(){$/;"	f	class:part	signature:()
+part::getConductivity	parts.h	/^	virtual supplies getConductivity();$/;"	p	class:part	access:public	signature:()
+part::getHealth	parts.h	/^	double getHealth(){return health;}$/;"	f	class:part	access:public	signature:()
+part::getRenderRound	parts.h	/^	static int getRenderRound(){return part::renderRound;}$/;"	f	class:part	access:public	signature:()
+part::grow	parts.h	/^	virtual part* grow(supplies& s, hormones& h)=0; 	\/\/ causes this part to grow$/;"	p	class:part	access:public	signature:(supplies& s, hormones& h)
+part::grown	parts.h	/^	void grown(){state = 2;}$/;"	f	class:part	access:public	signature:()
+part::health	parts.h	/^	double health; 	\/\/ the health of this part, in percentiles. 0 is dead, 1000 means that this part is $/;"	m	class:part	access:protected
+part::horm	parts.h	/^	hormones horm;$/;"	m	class:part	access:protected
+part::isDead	parts.h	/^	bool isDead(){return state == 0; }$/;"	f	class:part	access:public	signature:()
+part::isGrown	parts.h	/^	bool isGrown(){return state == 2;}$/;"	f	class:part	access:public	signature:()
+part::parent	parts.h	/^	part* parent; 	\/\/ pointer to the parent branch$/;"	m	class:part	access:protected
+part::part	parts.cpp	/^part::part(part* p, supplies u, supplies g): parent(p), uses(u), horm(hormones(0,0,0)), togrow(0),$/;"	f	class:part	signature:(part* p, supplies u, supplies g)
+part::part	parts.h	/^	part(part* p,supplies u, supplies g);$/;"	p	class:part	access:public	signature:(part* p,supplies u, supplies g)
+part::print	parts.cpp	/^void part::print(){}$/;"	f	class:part	signature:()
+part::print	parts.h	/^	virtual void print();$/;"	p	class:part	access:public	signature:()
+part::renderRound	parts.cpp	/^int part::renderRound = 0; $/;"	m	class:part	file:
+part::renderRound	parts.h	/^	static int renderRound; \/\/ says what round of rendering this is$/;"	m	class:part	access:protected
+part::setRenderRound	parts.h	/^	static void setRenderRound(int r){part::renderRound = r;}$/;"	f	class:part	access:public	signature:(int r)
+part::state	parts.h	/^	int state; 	\/\/ this parts state. currently 1 is growing, 2 grown, 0 dead. it really should be done properly$/;"	m	class:part	access:protected
+part::togrow	parts.h	/^	double togrow; 	\/\/ decides whether by how much  this part may grow - if it's > 1 then it grows (really just a handy var.)$/;"	m	class:part	access:protected
+part::transport	parts.cpp	/^part* part::transport(supplies& s, hormones& h){$/;"	f	class:part	signature:(supplies& s, hormones& h)
+part::transport	parts.h	/^	virtual part* transport(supplies& s, hormones& h);$/;"	p	class:part	access:public	signature:(supplies& s, hormones& h)
+part::uses	parts.h	/^	supplies uses; 	\/\/ defines how much supplies this part needs to survive - if it gets less it dies off$/;"	m	class:part	access:protected
+paused	main.cpp	/^bool paused = false;$/;"	v
+print	bud.cpp	/^void bud::print(){$/;"	f	class:bud	signature:()
+print	bud.h	/^	void print();$/;"	p	class:bud	access:public	signature:()
+print	glLogger.cpp	/^char* glLogger::print(const char* str){$/;"	f	class:glLogger	signature:(const char* str)
+print	glLogger.cpp	/^std::string& glLogger::print(const std::string& str){$/;"	f	class:glLogger	signature:(const std::string& str)
+print	glLogger.h	/^	static char* print(const char* str);$/;"	p	class:glLogger	access:public	signature:(const char* str)
+print	glLogger.h	/^	static std::string& print(const std::string& str);$/;"	p	class:glLogger	access:public	signature:(const std::string& str)
+print	leaf.cpp	/^void leaf::print(){$/;"	f	class:leaf	signature:()
+print	leaf.h	/^	void print();$/;"	p	class:leaf	access:public	signature:()
+print	objloader.cpp	/^void mesh::print(){}$/;"	f	class:mesh	signature:()
+print	objloader.cpp	/^void object::print(){}$/;"	f	class:object	signature:()
+print	objloader.h	/^	void print();$/;"	p	class:mesh	access:public	signature:()
+print	objloader.h	/^	void print();$/;"	p	class:object	access:public	signature:()
+print	parts.cpp	/^void part::print(){}$/;"	f	class:part	signature:()
+print	parts.h	/^	virtual void print();$/;"	p	class:part	access:public	signature:()
+print	ringScar.cpp	/^void ringScar::print(){$/;"	f	class:ringScar	signature:()
+print	ringScar.h	/^	void print();$/;"	p	class:ringScar	access:public	signature:()
+print	segment.cpp	/^void segment::print(){$/;"	f	class:segment	signature:()
+print	segment.h	/^	void print();$/;"	p	class:segment	access:public	signature:()
+print	tree.cpp	/^void tree::print(){$/;"	f	class:tree	signature:()
+print	tree.h	/^	void print();$/;"	p	class:tree	access:public	signature:()
+printText	glLogger.cpp	/^void glLogger::printText(float x, float y, const char* str){$/;"	f	class:glLogger	signature:(float x, float y, const char* str)
+printText	glLogger.cpp	/^void glLogger::printText(float x, float y, int r, int g, int b, const char* str){$/;"	f	class:glLogger	signature:(float x, float y, int r, int g, int b, const char* str)
+printText	glLogger.h	/^	static void printText(float x, float y, const char* str);$/;"	p	class:glLogger	access:public	signature:(float x, float y, const char* str)
+printText	glLogger.h	/^	static void printText(float x, float y, int r, int g, int b, const char* str);$/;"	p	class:glLogger	access:public	signature:(float x, float y, int r, int g, int b, const char* str)
+println	glLogger.cpp	/^char* glLogger::println(const char* str){$/;"	f	class:glLogger	signature:(const char* str)
+println	glLogger.cpp	/^std::string& glLogger::println(const std::string& str){$/;"	f	class:glLogger	signature:(const std::string& str)
+println	glLogger.h	/^	static char* println(const char* str);$/;"	p	class:glLogger	access:public	signature:(const char* str)
+println	glLogger.h	/^	static std::string& println(const std::string& str);$/;"	p	class:glLogger	access:public	signature:(const std::string& str)
+program	glsl.h	/^		GLuint program;$/;"	m	class:treeShader::shader	access:private
+putNum	glLogger.cpp	/^void glLogger::putNum(double number){$/;"	f	class:glLogger	signature:(double number)
+putNum	glLogger.cpp	/^void glLogger::putNum(long number){$/;"	f	class:glLogger	signature:(long number)
+putNum	glLogger.h	/^	static void putNum(double c);$/;"	p	class:glLogger	access:public	signature:(double c)
+putNum	glLogger.h	/^	static void putNum(long c);$/;"	p	class:glLogger	access:public	signature:(long c)
+putchar	glLogger.cpp	/^char glLogger::putchar(const char c){$/;"	f	class:glLogger	signature:(const char c)
+putchar	glLogger.h	/^	static char putchar(const char c);$/;"	p	class:glLogger	access:public	signature:(const char c)
+r	glLogger.cpp	/^int glLogger::r = 0;$/;"	m	class:glLogger	file:
+r	glLogger.h	/^	static int r;$/;"	m	class:glLogger	access:private
+radRate	segment.cpp	/^float segment::radRate = 0; 	\/\/ how fast each segment grows wider in optimal conditions$/;"	m	class:segment	file:
+radRate	segment.h	/^	static float radRate; 		\/\/ how fast each segment grows wider in optimal conditions$/;"	m	class:segment	access:protected
+radius	ringScar.h	/^	float radius;$/;"	m	class:ringScar	access:protected
+radius	segment.h	/^	float radius;$/;"	m	class:segment	access:protected
+readTexture	leaf.cpp	/^GLuint leaf::readTexture(const char* file){$/;"	f	class:leaf	signature:(const char* file)
+readTexture	leaf.h	/^	static GLuint readTexture(const char* file);$/;"	p	class:leaf	access:public	signature:(const char* file)
+readTexture	ringScar.cpp	/^GLuint ringScar::readTexture(const char* file){$/;"	f	class:ringScar	signature:(const char* file)
+readTexture	ringScar.h	/^	static GLuint readTexture(const char* file);$/;"	p	class:ringScar	access:public	signature:(const char* file)
+readTexture	segment.cpp	/^GLuint segment::readTexture(const char* file){$/;"	f	class:segment	signature:(const char* file)
+readTexture	segment.h	/^	static GLuint readTexture(const char* file);$/;"	p	class:segment	access:public	signature:(const char* file)
+ready	glsl.h	/^		bool ready; 	\/\/ says whether this shader has a program ready$/;"	m	class:treeShader::shader	access:private
+remainingPetioleStr	leaf.h	/^	double remainingPetioleStr; \/\/ strength of the petiole in %. when it reaches 0 the leaf drops$/;"	m	class:leaf	access:protected
+render	glLogger.cpp	/^int glLogger::render(bool clear){$/;"	f	class:glLogger	signature:(bool clear)
+render	glLogger.h	/^	static int render(bool clear = true);$/;"	p	class:glLogger	access:public	signature:(bool clear = true)
+renderRound	parts.cpp	/^int part::renderRound = 0; $/;"	m	class:part	file:
+renderRound	parts.h	/^	static int renderRound; \/\/ says what round of rendering this is$/;"	m	class:part	access:protected
+renderRounds	tree.cpp	/^int tree::renderRounds = 2;$/;"	m	class:tree	file:
+renderRounds	tree.h	/^	static int renderRounds;$/;"	m	class:tree	access:private
+renderScene	main.cpp	/^void renderScene(void) {$/;"	f	signature:(void)
+renderingRound	leaf.cpp	/^int leaf::renderingRound = 1;$/;"	m	class:leaf	file:
+renderingRound	leaf.h	/^	static int renderingRound; \/\/ defines on which render round leaves should be rendered$/;"	m	class:leaf	access:protected
+ringScar	ringScar.cpp	/^ringScar::ringScar(part* p, part* a): part(p, u, NULL){$/;"	f	class:ringScar	signature:(part* p, part* a)
+ringScar	ringScar.h	/^	ringScar(part* p, part* a);$/;"	p	class:ringScar	access:public	signature:(part* p, part* a)
+ringScar	ringScar.h	/^class ringScar : public part{$/;"	c	inherits:part
+ringScar::apex	ringScar.h	/^	part* apex; 			\/\/ the apex - can be anything really$/;"	m	class:ringScar	access:protected
+ringScar::die	ringScar.cpp	/^void ringScar::die(){$/;"	f	class:ringScar	signature:()
+ringScar::die	ringScar.h	/^	void die();$/;"	p	class:ringScar	access:public	signature:()
+ringScar::draw	ringScar.cpp	/^void ringScar::draw(){$/;"	f	class:ringScar	signature:()
+ringScar::draw	ringScar.h	/^	void draw();$/;"	p	class:ringScar	access:public	signature:()
+ringScar::grow	ringScar.cpp	/^part* ringScar::grow(supplies& s,hormones& h){$/;"	f	class:ringScar	signature:(supplies& s,hormones& h)
+ringScar::grow	ringScar.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:ringScar	access:public	signature:(supplies& u, hormones& h)
+ringScar::print	ringScar.cpp	/^void ringScar::print(){$/;"	f	class:ringScar	signature:()
+ringScar::print	ringScar.h	/^	void print();$/;"	p	class:ringScar	access:public	signature:()
+ringScar::radius	ringScar.h	/^	float radius;$/;"	m	class:ringScar	access:protected
+ringScar::readTexture	ringScar.cpp	/^GLuint ringScar::readTexture(const char* file){$/;"	f	class:ringScar	signature:(const char* file)
+ringScar::readTexture	ringScar.h	/^	static GLuint readTexture(const char* file);$/;"	p	class:ringScar	access:public	signature:(const char* file)
+ringScar::ringScar	ringScar.cpp	/^ringScar::ringScar(part* p, part* a): part(p, u, NULL){$/;"	f	class:ringScar	signature:(part* p, part* a)
+ringScar::ringScar	ringScar.h	/^	ringScar(part* p, part* a);$/;"	p	class:ringScar	access:public	signature:(part* p, part* a)
+ringScar::setHormoneEffect	ringScar.cpp	/^void ringScar::setHormoneEffect(hormones h){$/;"	f	class:ringScar	signature:(hormones h)
+ringScar::setTexture	ringScar.h	/^	static void setTexture(GLuint tex){ringScar::texture = tex;}$/;"	f	class:ringScar	access:public	signature:(GLuint tex)
+ringScar::texture	ringScar.cpp	/^GLuint ringScar::texture = 0;$/;"	m	class:ringScar	file:
+ringScar::texture	ringScar.h	/^	static GLuint texture;$/;"	m	class:ringScar	access:protected
+ringScar::transport	ringScar.cpp	/^part* ringScar::transport(supplies& s, hormones& h){$/;"	f	class:ringScar	signature:(supplies& s, hormones& h)
+ringScar::transport	ringScar.h	/^	part* transport(supplies& s, hormones& h);$/;"	p	class:ringScar	access:public	signature:(supplies& s, hormones& h)
+ringScar::~ringScar	ringScar.cpp	/^ringScar::~ringScar(){$/;"	f	class:ringScar	signature:()
+ringScar::~ringScar	ringScar.h	/^	~ringScar();$/;"	p	class:ringScar	access:public	signature:()
+s	tree.h	/^	supplies s;$/;"	m	class:tree	access:private
+segLen	tree.cpp	/^float tree::segLen = 0.010; 		\/\/ by how much should each branch grow longer$/;"	m	class:tree	file:
+segLen	tree.h	/^	static float segLen; 		\/\/ by how much should each branch grow longer$/;"	m	class:tree	access:private
+segRad	tree.cpp	/^float tree::segRad = 0.00005; 	\/\/ by how much should the radius of each brach grow$/;"	m	class:tree	file:
+segRad	tree.h	/^	static float segRad; 		\/\/ by how much should the radius of each brach grow$/;"	m	class:tree	access:private
+segment	segment.cpp	/^segment::segment(part* p, supplies u): part(p, u, segment::growth){$/;"	f	class:segment	signature:(part* p, supplies u)
+segment	segment.cpp	/^segment::segment(part* p, supplies u, part** b, part* a): part(p, u, segment::growth){$/;"	f	class:segment	signature:(part* p, supplies u, part** b, part* a)
+segment	segment.h	/^	segment(part* p,supplies u);$/;"	p	class:segment	access:public	signature:(part* p,supplies u)
+segment	segment.h	/^	segment(part* p,supplies u, part** b, part* a);$/;"	p	class:segment	access:public	signature:(part* p,supplies u, part** b, part* a)
+segment	segment.h	/^class segment : public part{$/;"	c	inherits:part
+segment::apex	segment.h	/^	part* apex; 			\/\/ the apex - can be anything really$/;"	m	class:segment	access:protected
+segment::branchAngle	segment.cpp	/^float segment::branchAngle = 0; $/;"	m	class:segment	file:
+segment::branchAngle	segment.h	/^	static float branchAngle; 	\/\/ at what angle do branches go out relative the main branch$/;"	m	class:segment	access:protected
+segment::budAngle	segment.cpp	/^float segment::budAngle = 0; $/;"	m	class:segment	file:
+segment::budAngle	segment.h	/^	static float budAngle; 		\/\/ at what angle do the buds pop out relative to the previous node$/;"	m	class:segment	access:protected
+segment::budnum	segment.cpp	/^int segment::budnum = 2; 	\/\/ the amount of buds at each node $/;"	m	class:segment	file:
+segment::budnum	segment.h	/^	static int budnum; 		\/\/ the amount of buds at each node $/;"	m	class:segment	access:protected
+segment::buds	segment.h	/^	part** buds; 			\/\/ a list of buds at the end of this node$/;"	m	class:segment	access:protected
+segment::die	segment.cpp	/^void segment::die(){$/;"	f	class:segment	signature:()
+segment::die	segment.h	/^	void die();$/;"	p	class:segment	access:public	signature:()
+segment::draw	segment.cpp	/^void segment::draw(){$/;"	f	class:segment	signature:()
+segment::draw	segment.h	/^	void draw();$/;"	p	class:segment	access:public	signature:()
+segment::drop	segment.h	/^	void drop(){};$/;"	f	class:segment	access:public	signature:()
+segment::getUses	segment.h	/^	static supplies getUses(){return segment::segmentUses;}$/;"	f	class:segment	access:public	signature:()
+segment::grow	segment.cpp	/^part* segment::grow(supplies& s,hormones& h){$/;"	f	class:segment	signature:(supplies& s,hormones& h)
+segment::grow	segment.h	/^	part* grow(supplies& u, hormones& h);$/;"	p	class:segment	access:public	signature:(supplies& u, hormones& h)
+segment::growth	segment.h	/^	static supplies growth; 	\/\/ how much supplies needed to grow$/;"	m	class:segment	access:protected
+segment::growthTime	segment.cpp	/^int segment::growthTime = 0; 	\/\/ for how many units should a segment grow for before it sprouts a new segment$/;"	m	class:segment	file:
+segment::growthTime	segment.h	/^	static int growthTime; 		\/\/ for how many units should a segment grow for before it sprouts a new segment$/;"	m	class:segment	access:protected
+segment::hormonesEffect	segment.h	/^	static hormones hormonesEffect; \/\/ the optimal amount of hormones for growth$/;"	m	class:segment	access:protected
+segment::hormonesMin	segment.h	/^	static hormones hormonesMin; 	\/\/ the min amount of hormones for growth$/;"	m	class:segment	access:protected
+segment::hormonesProd	segment.h	/^	static hormones hormonesProd; 	\/\/ how much hormones are produced$/;"	m	class:segment	access:protected
+segment::lenRate	segment.cpp	/^float segment::lenRate = 0; 	\/\/ how fast each segment grows longer in optimal conditions$/;"	m	class:segment	file:
+segment::lenRate	segment.h	/^	static float lenRate; 		\/\/ how fast each segment grows longer in optimal conditions$/;"	m	class:segment	access:protected
+segment::length	segment.h	/^	float length;$/;"	m	class:segment	access:protected
+segment::print	segment.cpp	/^void segment::print(){$/;"	f	class:segment	signature:()
+segment::print	segment.h	/^	void print();$/;"	p	class:segment	access:public	signature:()
+segment::radRate	segment.cpp	/^float segment::radRate = 0; 	\/\/ how fast each segment grows wider in optimal conditions$/;"	m	class:segment	file:
+segment::radRate	segment.h	/^	static float radRate; 		\/\/ how fast each segment grows wider in optimal conditions$/;"	m	class:segment	access:protected
+segment::radius	segment.h	/^	float radius;$/;"	m	class:segment	access:protected
+segment::readTexture	segment.cpp	/^GLuint segment::readTexture(const char* file){$/;"	f	class:segment	signature:(const char* file)
+segment::readTexture	segment.h	/^	static GLuint readTexture(const char* file);$/;"	p	class:segment	access:public	signature:(const char* file)
+segment::segment	segment.cpp	/^segment::segment(part* p, supplies u): part(p, u, segment::growth){$/;"	f	class:segment	signature:(part* p, supplies u)
+segment::segment	segment.cpp	/^segment::segment(part* p, supplies u, part** b, part* a): part(p, u, segment::growth){$/;"	f	class:segment	signature:(part* p, supplies u, part** b, part* a)
+segment::segment	segment.h	/^	segment(part* p,supplies u);$/;"	p	class:segment	access:public	signature:(part* p,supplies u)
+segment::segment	segment.h	/^	segment(part* p,supplies u, part** b, part* a);$/;"	p	class:segment	access:public	signature:(part* p,supplies u, part** b, part* a)
+segment::segmentUses	segment.h	/^	static supplies segmentUses; 	\/\/ how much supplies it uses $/;"	m	class:segment	access:protected
+segment::setBranchAngle	segment.h	/^	static void setBranchAngle(float a){segment::branchAngle = a;}$/;"	f	class:segment	access:public	signature:(float a)
+segment::setBudAngle	segment.h	/^	static void setBudAngle(float a){segment::budAngle = a;}$/;"	f	class:segment	access:public	signature:(float a)
+segment::setBudNum	segment.h	/^	static void setBudNum(int i){segment::budnum = i;}$/;"	f	class:segment	access:public	signature:(int i)
+segment::setGrowth	segment.h	/^	static void setGrowth(supplies g){segment::growth = g;}$/;"	f	class:segment	access:public	signature:(supplies g)
+segment::setHormoneEffect	segment.cpp	/^void segment::setHormoneEffect(hormones h){$/;"	f	class:segment	signature:(hormones h)
+segment::setHormoneEffect	segment.h	/^	static void setHormoneEffect(hormones h);$/;"	p	class:segment	access:public	signature:(hormones h)
+segment::setHormoneMin	segment.h	/^	static void setHormoneMin(hormones h){segment::hormonesMin = h;}$/;"	f	class:segment	access:public	signature:(hormones h)
+segment::setHormoneProd	segment.h	/^	static void setHormoneProd(hormones h){segment::hormonesProd = h;}$/;"	f	class:segment	access:public	signature:(hormones h)
+segment::setRate	segment.h	/^	static void setRate(float d, float r, int g){segment::lenRate = d;  segment::radRate = r; segment::growthTime = g;}$/;"	f	class:segment	access:public	signature:(float d, float r, int g)
+segment::setTexture	segment.h	/^	static void setTexture(GLuint tex){segment::texture = tex;}$/;"	f	class:segment	access:public	signature:(GLuint tex)
+segment::setUses	segment.h	/^	static void setUses(supplies u){segment::segmentUses = u;}$/;"	f	class:segment	access:public	signature:(supplies u)
+segment::texture	segment.cpp	/^GLuint segment::texture = 0;$/;"	m	class:segment	file:
+segment::texture	segment.h	/^	static GLuint texture;$/;"	m	class:segment	access:protected
+segment::transport	segment.cpp	/^part* segment::transport(supplies& s, hormones& h){$/;"	f	class:segment	signature:(supplies& s, hormones& h)
+segment::transport	segment.h	/^	part* transport(supplies& s, hormones& h);$/;"	p	class:segment	access:public	signature:(supplies& s, hormones& h)
+segment::~segment	segment.cpp	/^segment::~segment(){$/;"	f	class:segment	signature:()
+segment::~segment	segment.h	/^	~segment();$/;"	p	class:segment	access:public	signature:()
+segmentGrowthUse	tree.cpp	/^supplies tree::segmentGrowthUse = supplies(1,0,1);$/;"	m	class:tree	file:
+segmentGrowthUse	tree.h	/^	static supplies segmentGrowthUse;$/;"	m	class:tree	access:private
+segmentHormones	tree.cpp	/^hormones tree::segmentHormones = hormones(8,4,0);$/;"	m	class:tree	file:
+segmentHormones	tree.h	/^	static hormones segmentHormones; 		\/\/ the optimal amount of various hormones for growth$/;"	m	class:tree	access:private
+segmentHormonesMin	tree.cpp	/^hormones tree::segmentHormonesMin = hormones(0.2,0,0);$/;"	m	class:tree	file:
+segmentHormonesMin	tree.h	/^	static hormones segmentHormonesMin; 		\/\/ the min amount of various hormones for growth$/;"	m	class:tree	access:private
+segmentHormonesProd	tree.cpp	/^hormones tree::segmentHormonesProd = hormones(0,0,0);$/;"	m	class:tree	file:
+segmentHormonesProd	tree.h	/^	static hormones segmentHormonesProd; 		\/\/ the influence of various hormones$/;"	m	class:tree	access:private
+segmentUses	segment.h	/^	static supplies segmentUses; 	\/\/ how much supplies it uses $/;"	m	class:segment	access:protected
+sendUniform1f	glsl.cpp	/^void shader::sendUniform1f(const char* s, float i){$/;"	f	class:shader	signature:(const char* s, float i)
+sendUniform1f	glsl.h	/^		void sendUniform1f(const char* s, float i);$/;"	p	class:treeShader::shader	access:public	signature:(const char* s, float i)
+sendUniform1i	glsl.cpp	/^void shader::sendUniform1i(const char* s, GLuint i){$/;"	f	class:shader	signature:(const char* s, GLuint i)
+sendUniform1i	glsl.h	/^		void sendUniform1i(const char* s, GLuint i);$/;"	p	class:treeShader::shader	access:public	signature:(const char* s, GLuint i)
+setBranchAngle	segment.h	/^	static void setBranchAngle(float a){segment::branchAngle = a;}$/;"	f	class:segment	access:public	signature:(float a)
+setBudAngle	segment.h	/^	static void setBudAngle(float a){segment::budAngle = a;}$/;"	f	class:segment	access:public	signature:(float a)
+setBudNum	segment.h	/^	static void setBudNum(int i){segment::budnum = i;}$/;"	f	class:segment	access:public	signature:(int i)
+setColour	glLogger.cpp	/^void glLogger::setColour(int r, int g, int b){$/;"	f	class:glLogger	signature:(int r, int g, int b)
+setColour	glLogger.h	/^	static void setColour(int r, int g, int b);$/;"	p	class:glLogger	access:public	signature:(int r, int g, int b)
+setFont	glLogger.cpp	/^void glLogger::setFont(void* font){$/;"	f	class:glLogger	signature:(void* font)
+setFont	glLogger.h	/^	static void setFont(void* font);$/;"	p	class:glLogger	access:public	signature:(void* font)
+setGrowth	backup/meristem.h	/^	static void setGrowth(supplies s){ meristem::growth = s;}$/;"	f	class:meristem	access:public	signature:(supplies s)
+setGrowth	bud.h	/^	static void setGrowth(supplies s){bud::growth = s;}$/;"	f	class:bud	access:public	signature:(supplies s)
+setGrowth	leaf.h	/^	static void setGrowth(supplies s){ leaf::growth = s; }$/;"	f	class:leaf	access:public	signature:(supplies s)
+setGrowth	segment.h	/^	static void setGrowth(supplies g){segment::growth = g;}$/;"	f	class:segment	access:public	signature:(supplies g)
+setGrowthTime	backup/meristem.h	/^	static void setGrowthTime(int t){ meristem::growthTime = t;}$/;"	f	class:meristem	access:public	signature:(int t)
+setGrowthTime	bud.h	/^	static void setGrowthTime(int t){bud::growthTime = t;}$/;"	f	class:bud	access:public	signature:(int t)
+setHormone	bud.cpp	/^void bud::setHormone(hormones h){$/;"	f	class:bud	signature:(hormones h)
+setHormone	bud.h	/^	static void setHormone(hormones h);$/;"	p	class:bud	access:public	signature:(hormones h)
+setHormoneEffect	ringScar.cpp	/^void ringScar::setHormoneEffect(hormones h){$/;"	f	class:ringScar	signature:(hormones h)
+setHormoneEffect	segment.cpp	/^void segment::setHormoneEffect(hormones h){$/;"	f	class:segment	signature:(hormones h)
+setHormoneEffect	segment.h	/^	static void setHormoneEffect(hormones h);$/;"	p	class:segment	access:public	signature:(hormones h)
+setHormoneMin	segment.h	/^	static void setHormoneMin(hormones h){segment::hormonesMin = h;}$/;"	f	class:segment	access:public	signature:(hormones h)
+setHormoneProd	segment.h	/^	static void setHormoneProd(hormones h){segment::hormonesProd = h;}$/;"	f	class:segment	access:public	signature:(hormones h)
+setHormonesProd	bud.h	/^	static void setHormonesProd(hormones a){bud::hormonesProd = a;}$/;"	f	class:bud	access:public	signature:(hormones a)
+setLenRate	backup/meristem.h	/^	static void setLenRate(float l){ meristem::lenRate = l;}$/;"	f	class:meristem	access:public	signature:(float l)
+setModel	bud.h	/^	static void setModel(const char* f){bud::model.init(f,0.2);}$/;"	f	class:bud	access:public	signature:(const char* f)
+setRate	segment.h	/^	static void setRate(float d, float r, int g){segment::lenRate = d;  segment::radRate = r; segment::growthTime = g;}$/;"	f	class:segment	access:public	signature:(float d, float r, int g)
+setRenderRound	parts.h	/^	static void setRenderRound(int r){part::renderRound = r;}$/;"	f	class:part	access:public	signature:(int r)
+setRenderingRound	leaf.h	/^	static void setRenderingRound(int r){leaf::renderingRound = r;}$/;"	f	class:leaf	access:public	signature:(int r)
+setSize	leaf.h	/^	static void setSize(double s, double g){ leaf::maxSize = s; leaf::growBy = s*g\/100; }$/;"	f	class:leaf	access:public	signature:(double s, double g)
+setSugarProduced	leaf.h	/^	static void setSugarProduced(double s){leaf::sugarProduced = s;}$/;"	f	class:leaf	access:public	signature:(double s)
+setTexture	leaf.cpp	/^int leaf::setTexture(GLuint t,signed int i){$/;"	f	class:leaf	signature:(GLuint t,signed int i)
+setTexture	leaf.h	/^	static int setTexture(GLuint t,signed int i = -1);$/;"	p	class:leaf	access:public	signature:(GLuint t,signed int i = -1)
+setTexture	ringScar.h	/^	static void setTexture(GLuint tex){ringScar::texture = tex;}$/;"	f	class:ringScar	access:public	signature:(GLuint tex)
+setTexture	segment.h	/^	static void setTexture(GLuint tex){segment::texture = tex;}$/;"	f	class:segment	access:public	signature:(GLuint tex)
+setUse	bud.h	/^	static void setUse(supplies s){bud::use = s;}$/;"	f	class:bud	access:public	signature:(supplies s)
+setUses	leaf.h	/^	static void setUses(supplies s){ leaf::use = s; }$/;"	f	class:leaf	access:public	signature:(supplies s)
+setUses	segment.h	/^	static void setUses(supplies u){segment::segmentUses = u;}$/;"	f	class:segment	access:public	signature:(supplies u)
+setlight	main.cpp	/^void setlight(){$/;"	f	signature:()
+setupShader	leaf.cpp	/^int leaf::setupShader(treeShader::shader& s){$/;"	f	class:leaf	signature:(treeShader::shader& s)
+setupShader	leaf.h	/^	static int setupShader(treeShader::shader& s);$/;"	p	class:leaf	access:public	signature:(treeShader::shader& s)
+shader	glsl.cpp	/^shader::shader(): ready(false){}$/;"	f	class:shader	signature:()
+shader	glsl.cpp	/^shader::shader(const char* vShader, const char* pShader): ready(false){$/;"	f	class:shader	signature:(const char* vShader, const char* pShader)
+shader	glsl.h	/^		shader();$/;"	p	class:treeShader::shader	access:public	signature:()
+shader	glsl.h	/^		shader(const char* vShader, const char* pShader);$/;"	p	class:treeShader::shader	access:public	signature:(const char* vShader, const char* pShader)
+shader	glsl.h	/^	class shader{$/;"	c	namespace:treeShader
+shader::begin	glsl.cpp	/^void shader::begin(){$/;"	f	class:shader	signature:()
+shader::end	glsl.cpp	/^void shader::end(){$/;"	f	class:shader	signature:()
+shader::load	glsl.cpp	/^GLuint shader::load(GLenum type, const char *filename){ 	\/\/ loads a shader. type says what kind (vertex or fragment)$/;"	f	class:shader	signature:(GLenum type, const char *filename)
+shader::loadPixelShader	glsl.cpp	/^GLuint shader::loadPixelShader(const char* filename, bool link){$/;"	f	class:shader	signature:(const char* filename, bool link)
+shader::loadVertexShader	glsl.cpp	/^GLuint shader::loadVertexShader(const char* filename, bool link){$/;"	f	class:shader	signature:(const char* filename, bool link)
+shader::makeProgram	glsl.cpp	/^GLuint shader::makeProgram(GLuint vShader, GLuint pShader){$/;"	f	class:shader	signature:(GLuint vShader, GLuint pShader)
+shader::sendUniform1f	glsl.cpp	/^void shader::sendUniform1f(const char* s, float i){$/;"	f	class:shader	signature:(const char* s, float i)
+shader::sendUniform1i	glsl.cpp	/^void shader::sendUniform1i(const char* s, GLuint i){$/;"	f	class:shader	signature:(const char* s, GLuint i)
+shader::shader	glsl.cpp	/^shader::shader(): ready(false){}$/;"	f	class:shader	signature:()
+shader::shader	glsl.cpp	/^shader::shader(const char* vShader, const char* pShader): ready(false){$/;"	f	class:shader	signature:(const char* vShader, const char* pShader)
+shader::show_info_log	glsl.cpp	/^void shader::show_info_log(GLuint object,$/;"	f	class:shader	signature:(GLuint object, PFNGLGETSHADERIVPROC glGet__iv, PFNGLGETSHADERINFOLOGPROC glGet__InfoLog)
+shader::~shader	glsl.cpp	/^shader::~shader(){$/;"	f	class:shader	signature:()
+showHelp	main.cpp	/^void showHelp(){$/;"	f	signature:()
+show_info_log	glsl.cpp	/^void shader::show_info_log(GLuint object,$/;"	f	class:shader	signature:(GLuint object, PFNGLGETSHADERIVPROC glGet__iv, PFNGLGETSHADERINFOLOGPROC glGet__InfoLog)
+show_info_log	glsl.h	/^		void show_info_log(GLuint object,$/;"	p	class:treeShader::shader	access:private	signature:(GLuint object, PFNGLGETSHADERIVPROC glGet__iv, PFNGLGETSHADERINFOLOGPROC glGet__InfoLog)
+size	leaf.h	/^	double size; 		\/\/ size of leaf in %. 100% is the max. size of a leaf$/;"	m	class:leaf	access:protected
+speedup	main.cpp	/^int speedup = 1; 		\/\/ how many times faster should the clock spin$/;"	v
+state	parts.h	/^	int state; 	\/\/ this parts state. currently 1 is growing, 2 grown, 0 dead. it really should be done properly$/;"	m	class:part	access:protected
+sugar	parts.h	/^	double sugar;$/;"	m	struct:supplies	access:public
+sugarProduced	leaf.cpp	/^double leaf::sugarProduced = 2;$/;"	m	class:leaf	file:
+sugarProduced	leaf.h	/^	static double sugarProduced; \/\/ defines how much sugar a fully developed leaf produces$/;"	m	class:leaf	access:protected
+supplies	parts.cpp	/^supplies::supplies(): water(0), minerals(0), sugar(0) {}$/;"	f	class:supplies	signature:()
+supplies	parts.cpp	/^supplies::supplies(double w, double m, double s): water(w), minerals(m), sugar(s) {}$/;"	f	class:supplies	signature:(double w, double m, double s)
+supplies	parts.h	/^	supplies();$/;"	p	struct:supplies	access:public	signature:()
+supplies	parts.h	/^	supplies(double w, double m, double s);$/;"	p	struct:supplies	access:public	signature:(double w, double m, double s)
+supplies	parts.h	/^struct supplies{$/;"	s
+supplies::minerals	parts.h	/^	double minerals;$/;"	m	struct:supplies	access:public
+supplies::normalise	parts.cpp	/^supplies supplies::normalise(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+supplies::normalise	parts.h	/^	supplies normalise(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::operator *	parts.cpp	/^supplies supplies::operator*(const double d){$/;"	f	class:supplies	signature:(const double d)
+supplies::operator *	parts.h	/^	supplies operator*(const double d);$/;"	p	struct:supplies	access:public	signature:(const double d)
+supplies::operator +	parts.cpp	/^supplies supplies::operator+(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+supplies::operator +	parts.h	/^	supplies operator+(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::operator +=	parts.cpp	/^supplies& supplies::operator+=(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+supplies::operator +=	parts.h	/^	supplies& operator+=(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::operator -	parts.cpp	/^supplies supplies::operator-(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+supplies::operator -	parts.h	/^	supplies operator-(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::operator -=	parts.cpp	/^supplies& supplies::operator-=(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+supplies::operator -=	parts.h	/^	supplies& operator-=(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::operator /	parts.cpp	/^supplies supplies::operator\/(const double d){$/;"	f	class:supplies	signature:(const double d)
+supplies::operator /	parts.cpp	/^supplies supplies::operator\/(const supplies& a){$/;"	f	class:supplies	signature:(const supplies& a)
+supplies::operator /	parts.h	/^	supplies operator\/(const double d);$/;"	p	struct:supplies	access:public	signature:(const double d)
+supplies::operator /	parts.h	/^	supplies operator\/(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::operator <	parts.cpp	/^bool supplies::operator<(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+supplies::operator <	parts.h	/^	bool operator<(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::operator <<	parts.h	/^	friend std::ostream& operator<<(std::ostream& output, const supplies& s);$/;"	p	struct:supplies	access:friend	signature:(std::ostream& output, const supplies& s)
+supplies::operator >	parts.cpp	/^bool supplies::operator>(const supplies& s){$/;"	f	class:supplies	signature:(const supplies& s)
+supplies::operator >	parts.h	/^	bool operator>(const supplies& s);$/;"	p	struct:supplies	access:public	signature:(const supplies& s)
+supplies::sugar	parts.h	/^	double sugar;$/;"	m	struct:supplies	access:public
+supplies::supplies	parts.cpp	/^supplies::supplies(): water(0), minerals(0), sugar(0) {}$/;"	f	class:supplies	signature:()
+supplies::supplies	parts.cpp	/^supplies::supplies(double w, double m, double s): water(w), minerals(m), sugar(s) {}$/;"	f	class:supplies	signature:(double w, double m, double s)
+supplies::supplies	parts.h	/^	supplies();$/;"	p	struct:supplies	access:public	signature:()
+supplies::supplies	parts.h	/^	supplies(double w, double m, double s);$/;"	p	struct:supplies	access:public	signature:(double w, double m, double s)
+supplies::water	parts.h	/^	double water;$/;"	m	struct:supplies	access:public
+t	main.cpp	/^tree t;$/;"	v
+temperature	main.cpp	/^double temperature = 10.0; 	\/\/ the current temperature$/;"	v
+texCoord	objloader.cpp	/^texCoord::texCoord() : u(0), v(0) {}$/;"	f	class:texCoord	signature:()
+texCoord	objloader.cpp	/^texCoord::texCoord(double U, double V) : u(U), v(V) {}$/;"	f	class:texCoord	signature:(double U, double V)
+texCoord	objloader.h	/^	texCoord();$/;"	p	struct:texCoord	access:public	signature:()
+texCoord	objloader.h	/^	texCoord(double U, double V);$/;"	p	struct:texCoord	access:public	signature:(double U, double V)
+texCoord	objloader.h	/^struct texCoord {$/;"	s
+texCoord::drawGL	objloader.cpp	/^void texCoord::drawGL(){$/;"	f	class:texCoord	signature:()
+texCoord::drawGL	objloader.h	/^	void drawGL();$/;"	p	struct:texCoord	access:public	signature:()
+texCoord::texCoord	objloader.cpp	/^texCoord::texCoord() : u(0), v(0) {}$/;"	f	class:texCoord	signature:()
+texCoord::texCoord	objloader.cpp	/^texCoord::texCoord(double U, double V) : u(U), v(V) {}$/;"	f	class:texCoord	signature:(double U, double V)
+texCoord::texCoord	objloader.h	/^	texCoord();$/;"	p	struct:texCoord	access:public	signature:()
+texCoord::texCoord	objloader.h	/^	texCoord(double U, double V);$/;"	p	struct:texCoord	access:public	signature:(double U, double V)
+texCoord::u	objloader.h	/^	double u,v;$/;"	m	struct:texCoord	access:public
+texCoord::v	objloader.h	/^	double u,v;$/;"	m	struct:texCoord	access:public
+texCoordnum	objloader.h	/^	long texCoordnum;$/;"	m	class:object	access:private
+texCoordnum	objloader.h	/^	unsigned long texCoordnum;$/;"	m	class:mesh	access:private
+texCoords	objloader.h	/^	long texCoords[3];$/;"	m	struct:indexedTriangle	access:public
+texCoords	objloader.h	/^	texCoord* texCoords;$/;"	m	class:mesh	access:private
+texCoords	objloader.h	/^	texCoord* texCoords;$/;"	m	class:object	access:private
+texture	leaf.cpp	/^GLuint leaf::texture[10];$/;"	m	class:leaf	file:
+texture	leaf.h	/^	static GLuint texture[10]; 	\/\/ leaf textures$/;"	m	class:leaf	access:protected
+texture	ringScar.cpp	/^GLuint ringScar::texture = 0;$/;"	m	class:ringScar	file:
+texture	ringScar.h	/^	static GLuint texture;$/;"	m	class:ringScar	access:protected
+texture	segment.cpp	/^GLuint segment::texture = 0;$/;"	m	class:segment	file:
+texture	segment.h	/^	static GLuint texture;$/;"	m	class:segment	access:protected
+textures	leaf.cpp	/^GLuint leaf::textures = 0;$/;"	m	class:leaf	file:
+textures	leaf.h	/^	static GLuint textures; 	\/\/ amount of leaf texture$/;"	m	class:leaf	access:protected
+timedilation	tree.cpp	/^double timedilation = 0.5;$/;"	v
+timeout	main.cpp	/^int timeout = 20; 	\/\/ time to wait between rounds$/;"	v
+togrow	parts.h	/^	double togrow; 	\/\/ decides whether by how much  this part may grow - if it's > 1 then it grows (really just a handy var.)$/;"	m	class:part	access:protected
+transport	backup/meristem.cpp	/^part* meristem::transport(supplies& s, hormones& h){$/;"	f	class:meristem	signature:(supplies& s, hormones& h)
+transport	backup/meristem.h	/^	part* transport(supplies& s, hormones& h);$/;"	p	class:meristem	access:public	signature:(supplies& s, hormones& h)
+transport	bud.cpp	/^part* bud::transport(supplies& s, hormones& h){$/;"	f	class:bud	signature:(supplies& s, hormones& h)
+transport	bud.h	/^	part* transport(supplies&, hormones& h);$/;"	p	class:bud	access:public	signature:(supplies&, hormones& h)
+transport	leaf.cpp	/^leaf* leaf::transport(supplies& s, hormones& h){$/;"	f	class:leaf	signature:(supplies& s, hormones& h)
+transport	leaf.h	/^	leaf* transport(supplies& s, hormones& h);$/;"	p	class:leaf	access:public	signature:(supplies& s, hormones& h)
+transport	parts.cpp	/^part* part::transport(supplies& s, hormones& h){$/;"	f	class:part	signature:(supplies& s, hormones& h)
+transport	parts.h	/^	virtual part* transport(supplies& s, hormones& h);$/;"	p	class:part	access:public	signature:(supplies& s, hormones& h)
+transport	ringScar.cpp	/^part* ringScar::transport(supplies& s, hormones& h){$/;"	f	class:ringScar	signature:(supplies& s, hormones& h)
+transport	ringScar.h	/^	part* transport(supplies& s, hormones& h);$/;"	p	class:ringScar	access:public	signature:(supplies& s, hormones& h)
+transport	segment.cpp	/^part* segment::transport(supplies& s, hormones& h){$/;"	f	class:segment	signature:(supplies& s, hormones& h)
+transport	segment.h	/^	part* transport(supplies& s, hormones& h);$/;"	p	class:segment	access:public	signature:(supplies& s, hormones& h)
+transport	tree.cpp	/^int tree::transport(){$/;"	f	class:tree	signature:()
+transport	tree.h	/^	int transport();$/;"	p	class:tree	access:public	signature:()
+tree	tree.cpp	/^tree::tree(): s(780000,560,800), h(3,10,0){$/;"	f	class:tree	signature:()
+tree	tree.h	/^	tree();$/;"	p	class:tree	access:public	signature:()
+tree	tree.h	/^class tree{$/;"	c
+tree::barkTexture	tree.h	/^	GLuint barkTexture;$/;"	m	class:tree	access:private
+tree::baseSegmentUse	tree.cpp	/^supplies tree::baseSegmentUse = supplies(1,0,0);$/;"	m	class:tree	file:
+tree::baseSegmentUse	tree.h	/^	static supplies baseSegmentUse;$/;"	m	class:tree	access:private
+tree::branchAngle	tree.cpp	/^float tree::branchAngle = 30; 	\/\/ angle between child branch and main branch (in degrees)$/;"	m	class:tree	file:
+tree::branchAngle	tree.h	/^	static float branchAngle; 	\/\/ angle between child branch and main branch (in degrees)$/;"	m	class:tree	access:private
+tree::budAngle	tree.cpp	/^float tree::budAngle = 0; 	\/\/ angle of rotation between nodes (in degrees)$/;"	m	class:tree	file:
+tree::budAngle	tree.h	/^	static float budAngle; 		\/\/ angle of rotation between nodes (in degrees)$/;"	m	class:tree	access:private
+tree::budGrowthTime	tree.cpp	/^int tree::budGrowthTime = 194; 	\/\/ the amount of time (in hours) before a bud is able to sprout$/;"	m	class:tree	file:
+tree::budGrowthTime	tree.h	/^	static int budGrowthTime; 	\/\/ the amount of time (in hours) before a bud is able to sprout$/;"	m	class:tree	access:private
+tree::budGrowthUse	tree.cpp	/^supplies tree::budGrowthUse = supplies(1,2,1);$/;"	m	class:tree	file:
+tree::budGrowthUse	tree.h	/^	static supplies budGrowthUse; 	\/\/ amount of supplies needed by a bud to sprout$/;"	m	class:tree	access:private
+tree::budHormones	tree.cpp	/^hormones tree::budHormones = hormones(4,4,0);$/;"	m	class:tree	file:
+tree::budHormones	tree.h	/^	static hormones budHormones; 		\/\/ the influence of various hormones$/;"	m	class:tree	access:private
+tree::budHormonesProd	tree.h	/^	static hormones budHormonesProd; 		\/\/ how much auxin is produced by each bud$/;"	m	class:tree	access:private
+tree::budUse	tree.cpp	/^supplies tree::budUse = supplies(1,0,0);$/;"	m	class:tree	file:
+tree::budUse	tree.h	/^	static supplies budUse; 	\/\/ the amount of supplies used by a bud to survive$/;"	m	class:tree	access:private
+tree::budsnum	tree.cpp	/^int tree::budsnum = 2; 		\/\/ number of buds per node$/;"	m	class:tree	file:
+tree::budsnum	tree.h	/^	static int budsnum; 		\/\/ number of buds per node$/;"	m	class:tree	access:private
+tree::draw	tree.cpp	/^void tree::draw(bool textured){$/;"	f	class:tree	signature:(bool textured)
+tree::draw	tree.h	/^	void draw(bool textured = true);$/;"	p	class:tree	access:public	signature:(bool textured = true)
+tree::effect	tree.cpp	/^double tree::effect(hormones& h){$/;"	f	class:tree	signature:(hormones& h)
+tree::effect	tree.h	/^	double effect(hormones& h); \/\/ used to change this part with a hormone$/;"	p	class:tree	access:public	signature:(hormones& h)
+tree::grow	tree.cpp	/^int tree::grow(){$/;"	f	class:tree	signature:()
+tree::grow	tree.h	/^	int grow();$/;"	p	class:tree	access:public	signature:()
+tree::h	tree.h	/^	hormones h;$/;"	m	class:tree	access:private
+tree::init	tree.cpp	/^void tree::init(){$/;"	f	class:tree	signature:()
+tree::init	tree.h	/^	void init();$/;"	p	class:tree	access:public	signature:()
+tree::initGraphics	tree.cpp	/^void tree::initGraphics(){$/;"	f	class:tree	signature:()
+tree::initGraphics	tree.h	/^	void initGraphics();$/;"	p	class:tree	access:public	signature:()
+tree::leafGrowBy	tree.cpp	/^double tree::leafGrowBy = 1; 	\/\/ by how much (in %) a leaf grows$/;"	m	class:tree	file:
+tree::leafGrowBy	tree.h	/^	static double leafGrowBy; 	\/\/ by how much (in %) a leaf grows$/;"	m	class:tree	access:private
+tree::leafGrowth	tree.cpp	/^supplies tree::leafGrowth = supplies(1, 1, 1); 	\/\/ amount of supplies needed by each leaf to grow$/;"	m	class:tree	file:
+tree::leafGrowth	tree.h	/^	static supplies leafGrowth; 	\/\/ amount of supplies needed by each leaf to grow$/;"	m	class:tree	access:private
+tree::leafMaxSize	tree.cpp	/^double tree::leafMaxSize = 1; 	\/\/ max leaf size$/;"	m	class:tree	file:
+tree::leafMaxSize	tree.h	/^	static double leafMaxSize; 	\/\/ max size of a leaf$/;"	m	class:tree	access:private
+tree::leafRenderRound	tree.cpp	/^int tree::leafRenderRound = 1;$/;"	m	class:tree	file:
+tree::leafRenderRound	tree.h	/^	static int leafRenderRound; 	\/\/ round when leaves should be rendered$/;"	m	class:tree	access:private
+tree::leafShader	tree.h	/^	treeShader::shader leafShader;$/;"	m	class:tree	access:private
+tree::leafSugarProduced	tree.cpp	/^double tree::leafSugarProduced = 2.5;$/;"	m	class:tree	file:
+tree::leafSugarProduced	tree.h	/^	static double leafSugarProduced;\/\/ how much sugar is produced by a fully grown, healthy leaf$/;"	m	class:tree	access:private
+tree::leafTexture	tree.h	/^	GLuint leafTexture;$/;"	m	class:tree	access:private
+tree::leafUse	tree.cpp	/^supplies tree::leafUse = supplies(4, 1, 0); 	\/\/ amount of supplies used by each leaf$/;"	m	class:tree	file:
+tree::leafUse	tree.h	/^	static supplies leafUse; 	\/\/ amount of supplies used by each leaf$/;"	m	class:tree	access:private
+tree::meristemTime	tree.cpp	/^int tree::meristemTime = 194; 	\/\/ the amount of time before a meristem grows a new segment$/;"	m	class:tree	file:
+tree::meristemTime	tree.h	/^	static int meristemTime; 	\/\/ the amount of time (in hours) before a meristem produces a new section$/;"	m	class:tree	access:private
+tree::print	tree.cpp	/^void tree::print(){$/;"	f	class:tree	signature:()
+tree::print	tree.h	/^	void print();$/;"	p	class:tree	access:public	signature:()
+tree::renderRounds	tree.cpp	/^int tree::renderRounds = 2;$/;"	m	class:tree	file:
+tree::renderRounds	tree.h	/^	static int renderRounds;$/;"	m	class:tree	access:private
+tree::s	tree.h	/^	supplies s;$/;"	m	class:tree	access:private
+tree::segLen	tree.cpp	/^float tree::segLen = 0.010; 		\/\/ by how much should each branch grow longer$/;"	m	class:tree	file:
+tree::segLen	tree.h	/^	static float segLen; 		\/\/ by how much should each branch grow longer$/;"	m	class:tree	access:private
+tree::segRad	tree.cpp	/^float tree::segRad = 0.00005; 	\/\/ by how much should the radius of each brach grow$/;"	m	class:tree	file:
+tree::segRad	tree.h	/^	static float segRad; 		\/\/ by how much should the radius of each brach grow$/;"	m	class:tree	access:private
+tree::segmentGrowthUse	tree.cpp	/^supplies tree::segmentGrowthUse = supplies(1,0,1);$/;"	m	class:tree	file:
+tree::segmentGrowthUse	tree.h	/^	static supplies segmentGrowthUse;$/;"	m	class:tree	access:private
+tree::segmentHormones	tree.cpp	/^hormones tree::segmentHormones = hormones(8,4,0);$/;"	m	class:tree	file:
+tree::segmentHormones	tree.h	/^	static hormones segmentHormones; 		\/\/ the optimal amount of various hormones for growth$/;"	m	class:tree	access:private
+tree::segmentHormonesMin	tree.cpp	/^hormones tree::segmentHormonesMin = hormones(0.2,0,0);$/;"	m	class:tree	file:
+tree::segmentHormonesMin	tree.h	/^	static hormones segmentHormonesMin; 		\/\/ the min amount of various hormones for growth$/;"	m	class:tree	access:private
+tree::segmentHormonesProd	tree.cpp	/^hormones tree::segmentHormonesProd = hormones(0,0,0);$/;"	m	class:tree	file:
+tree::segmentHormonesProd	tree.h	/^	static hormones segmentHormonesProd; 		\/\/ the influence of various hormones$/;"	m	class:tree	access:private
+tree::transport	tree.cpp	/^int tree::transport(){$/;"	f	class:tree	signature:()
+tree::transport	tree.h	/^	int transport();$/;"	p	class:tree	access:public	signature:()
+tree::tree	tree.cpp	/^tree::tree(): s(780000,560,800), h(3,10,0){$/;"	f	class:tree	signature:()
+tree::tree	tree.h	/^	tree();$/;"	p	class:tree	access:public	signature:()
+tree::trunk	tree.h	/^	part* trunk;$/;"	m	class:tree	access:private
+tree::winter	tree.cpp	/^int tree::winter(){$/;"	f	class:tree	signature:()
+tree::winter	tree.h	/^	int winter();$/;"	p	class:tree	access:public	signature:()
+tree::~tree	tree.cpp	/^tree::~tree(){}$/;"	f	class:tree	signature:()
+tree::~tree	tree.h	/^	~tree();$/;"	p	class:tree	access:public	signature:()
+treeShader	glsl.h	/^namespace treeShader{$/;"	n
+treeShader::shader	glsl.h	/^	class shader{$/;"	c	namespace:treeShader
+treeShader::shader::begin	glsl.h	/^		void begin();$/;"	p	class:treeShader::shader	access:public	signature:()
+treeShader::shader::end	glsl.h	/^		void end();$/;"	p	class:treeShader::shader	access:public	signature:()
+treeShader::shader::fragmentShader	glsl.h	/^		GLuint fragmentShader;$/;"	m	class:treeShader::shader	access:private
+treeShader::shader::getPixelShader	glsl.h	/^		GLuint getPixelShader(){return fragmentShader;}$/;"	f	class:treeShader::shader	access:public	signature:()
+treeShader::shader::getProgram	glsl.h	/^		GLuint getProgram(){return program;}$/;"	f	class:treeShader::shader	access:public	signature:()
+treeShader::shader::getVertexShader	glsl.h	/^		GLuint getVertexShader(){return vertexShader;}$/;"	f	class:treeShader::shader	access:public	signature:()
+treeShader::shader::load	glsl.h	/^		GLuint load(GLenum type, const char *filename); 	\/\/ loads a shader. type says what kind (vertex or fragment)$/;"	p	class:treeShader::shader	access:public	signature:(GLenum type, const char *filename)
+treeShader::shader::loadPixelShader	glsl.h	/^		GLuint loadPixelShader(const char* filename, bool link = false);$/;"	p	class:treeShader::shader	access:public	signature:(const char* filename, bool link = false)
+treeShader::shader::loadVertexShader	glsl.h	/^		GLuint loadVertexShader(const char* filename, bool link = false);$/;"	p	class:treeShader::shader	access:public	signature:(const char* filename, bool link = false)
+treeShader::shader::makeProgram	glsl.h	/^		GLuint makeProgram(GLuint vShader, GLuint pShader);$/;"	p	class:treeShader::shader	access:public	signature:(GLuint vShader, GLuint pShader)
+treeShader::shader::program	glsl.h	/^		GLuint program;$/;"	m	class:treeShader::shader	access:private
+treeShader::shader::ready	glsl.h	/^		bool ready; 	\/\/ says whether this shader has a program ready$/;"	m	class:treeShader::shader	access:private
+treeShader::shader::sendUniform1f	glsl.h	/^		void sendUniform1f(const char* s, float i);$/;"	p	class:treeShader::shader	access:public	signature:(const char* s, float i)
+treeShader::shader::sendUniform1i	glsl.h	/^		void sendUniform1i(const char* s, GLuint i);$/;"	p	class:treeShader::shader	access:public	signature:(const char* s, GLuint i)
+treeShader::shader::shader	glsl.h	/^		shader();$/;"	p	class:treeShader::shader	access:public	signature:()
+treeShader::shader::shader	glsl.h	/^		shader(const char* vShader, const char* pShader);$/;"	p	class:treeShader::shader	access:public	signature:(const char* vShader, const char* pShader)
+treeShader::shader::show_info_log	glsl.h	/^		void show_info_log(GLuint object,$/;"	p	class:treeShader::shader	access:private	signature:(GLuint object, PFNGLGETSHADERIVPROC glGet__iv, PFNGLGETSHADERINFOLOGPROC glGet__InfoLog)
+treeShader::shader::vertexShader	glsl.h	/^		GLuint vertexShader;$/;"	m	class:treeShader::shader	access:private
+treeShader::shader::~shader	glsl.h	/^		~shader();$/;"	p	class:treeShader::shader	access:public	signature:()
+trianglenum	objloader.h	/^	unsigned long trianglenum;$/;"	m	class:mesh	access:private
+triangles	objloader.h	/^	indexedTriangle* triangles;$/;"	m	class:mesh	access:private
+trunk	tree.h	/^	part* trunk;$/;"	m	class:tree	access:private
+turnDegrees	ringScar.h	/^const double turnDegrees = 90.0; \/\/ by how much any segments sprouting from this should be turned$/;"	v
+u	objloader.h	/^	double u,v;$/;"	m	struct:texCoord	access:public
+use	bud.cpp	/^supplies bud::use = supplies(1,0,1); 	\/\/ how much supplies used$/;"	m	class:bud	file:
+use	bud.h	/^	static supplies use; 	\/\/ how much supplies used by a bud$/;"	m	class:bud	access:protected
+use	leaf.cpp	/^supplies leaf::use = supplies(3,1,0);  	\/\/ defines how much supplies a leaf needs to survive$/;"	m	class:leaf	file:
+use	leaf.h	/^	static supplies use; 	\/\/ defines how much supplies a leaf needs to survive$/;"	m	class:leaf	access:protected
+uses	parts.h	/^	supplies uses; 	\/\/ defines how much supplies this part needs to survive - if it gets less it dies off$/;"	m	class:part	access:protected
+v	objloader.h	/^	double u,v;$/;"	m	struct:texCoord	access:public
+vangle	main.cpp	/^double vangle = -90;$/;"	v
+vertex	objloader.cpp	/^vertex::vertex() : x(0), y(0), z(0) {}$/;"	f	class:vertex	signature:()
+vertex	objloader.cpp	/^vertex::vertex(double X, double Y, double Z) : x(X), y(Y), z(Z) {}$/;"	f	class:vertex	signature:(double X, double Y, double Z)
+vertex	objloader.h	/^	vertex();$/;"	p	struct:vertex	access:public	signature:()
+vertex	objloader.h	/^	vertex(double X, double Y, double Z);$/;"	p	struct:vertex	access:public	signature:(double X, double Y, double Z)
+vertex	objloader.h	/^struct vertex{$/;"	s
+vertex::drawGL	objloader.cpp	/^void vertex::drawGL(){$/;"	f	class:vertex	signature:()
+vertex::drawGL	objloader.h	/^	void drawGL();$/;"	p	struct:vertex	access:public	signature:()
+vertex::operator *	objloader.cpp	/^vertex& vertex::operator*(double num){$/;"	f	class:vertex	signature:(double num)
+vertex::operator *	objloader.h	/^	vertex& operator*(double num);$/;"	p	struct:vertex	access:public	signature:(double num)
+vertex::vertex	objloader.cpp	/^vertex::vertex() : x(0), y(0), z(0) {}$/;"	f	class:vertex	signature:()
+vertex::vertex	objloader.cpp	/^vertex::vertex(double X, double Y, double Z) : x(X), y(Y), z(Z) {}$/;"	f	class:vertex	signature:(double X, double Y, double Z)
+vertex::vertex	objloader.h	/^	vertex();$/;"	p	struct:vertex	access:public	signature:()
+vertex::vertex	objloader.h	/^	vertex(double X, double Y, double Z);$/;"	p	struct:vertex	access:public	signature:(double X, double Y, double Z)
+vertex::x	objloader.h	/^	double x,y,z;$/;"	m	struct:vertex	access:public
+vertex::y	objloader.h	/^	double x,y,z;$/;"	m	struct:vertex	access:public
+vertex::z	objloader.h	/^	double x,y,z;$/;"	m	struct:vertex	access:public
+vertexShader	glsl.h	/^		GLuint vertexShader;$/;"	m	class:treeShader::shader	access:private
+vertexes	objloader.h	/^	long vertexes[3];$/;"	m	struct:indexedTriangle	access:public
+vertexes	objloader.h	/^	vertex* vertexes;$/;"	m	class:mesh	access:private
+vertexes	objloader.h	/^	vertex* vertexes;$/;"	m	class:object	access:private
+vertexnum	objloader.h	/^	long vertexnum;$/;"	m	class:object	access:private
+vertexnum	objloader.h	/^	unsigned long vertexnum;$/;"	m	class:mesh	access:private
+w	main.cpp	/^int w,h;$/;"	v
+water	parts.h	/^	double water;$/;"	m	struct:supplies	access:public
+winter	tree.cpp	/^int tree::winter(){$/;"	f	class:tree	signature:()
+winter	tree.h	/^	int winter();$/;"	p	class:tree	access:public	signature:()
+wireframe	main.cpp	/^bool wireframe = false;$/;"	v
+x	main.cpp	/^double x = 5;$/;"	v
+x	objloader.h	/^	double x,y,z;$/;"	m	struct:vertex	access:public
+y	main.cpp	/^double y = 5;$/;"	v
+y	objloader.h	/^	double x,y,z;$/;"	m	struct:vertex	access:public
+z	objloader.h	/^	double x,y,z;$/;"	m	struct:vertex	access:public
+zoom	main.cpp	/^double zoom = 20;$/;"	v
+~bud	bud.cpp	/^bud::~bud(){$/;"	f	class:bud	signature:()
+~bud	bud.h	/^	~bud();$/;"	p	class:bud	access:public	signature:()
+~meristem	backup/meristem.cpp	/^meristem::~meristem(){$/;"	f	class:meristem	signature:()
+~meristem	backup/meristem.h	/^	~meristem();$/;"	p	class:meristem	access:public	signature:()
+~mesh	objloader.cpp	/^mesh::~mesh(){$/;"	f	class:mesh	signature:()
+~mesh	objloader.h	/^	~mesh();$/;"	p	class:mesh	access:public	signature:()
+~ringScar	ringScar.cpp	/^ringScar::~ringScar(){$/;"	f	class:ringScar	signature:()
+~ringScar	ringScar.h	/^	~ringScar();$/;"	p	class:ringScar	access:public	signature:()
+~segment	segment.cpp	/^segment::~segment(){$/;"	f	class:segment	signature:()
+~segment	segment.h	/^	~segment();$/;"	p	class:segment	access:public	signature:()
+~shader	glsl.cpp	/^shader::~shader(){$/;"	f	class:shader	signature:()
+~shader	glsl.h	/^		~shader();$/;"	p	class:treeShader::shader	access:public	signature:()
+~tree	tree.cpp	/^tree::~tree(){}$/;"	f	class:tree	signature:()
+~tree	tree.h	/^	~tree();$/;"	p	class:tree	access:public	signature:()

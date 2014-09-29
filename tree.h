@@ -1,14 +1,15 @@
 #ifndef TREE_H
 #define TREE_H
 #include <iostream>
+//#include "glsl.h"
 
+#include "leaf.h"
 #include "parts.h"
 #include "segment.h"
-#include "meristem.h"
 #include "bud.h"
-#include "leaf.h"
 
 #include <GL/glut.h>
+#include "glLogger.h"
 
 
 class tree{
@@ -22,7 +23,9 @@ class tree{
 	static float segLen; 		// by how much should each branch grow longer
 	static supplies baseSegmentUse;
 	static supplies segmentGrowthUse;
-	static hormones segmentHormones; 		// the influence of various hormones
+	static hormones segmentHormones; 		// the optimal amount of various hormones for growth
+	static hormones segmentHormonesMin; 		// the min amount of various hormones for growth
+	static hormones segmentHormonesProd; 		// the influence of various hormones
 	static int meristemTime; 	// the amount of time (in hours) before a meristem produces a new section
 
 	static int budGrowthTime; 	// the amount of time (in hours) before a bud is able to sprout
@@ -33,15 +36,25 @@ class tree{
 
 	static supplies leafUse; 	// amount of supplies used by each leaf
 	static supplies leafGrowth; 	// amount of supplies needed by each leaf to grow
+	static double leafSugarProduced;// how much sugar is produced by a fully grown, healthy leaf
 	static double leafGrowBy; 	// by how much (in %) a leaf grows
 	static double leafMaxSize; 	// max size of a leaf
+	static int leafRenderRound; 	// round when leaves should be rendered
+	GLuint leafTexture;
+	GLuint barkTexture;
+
+	static int renderRounds;
+	treeShader::shader leafShader;
 public:
 	tree();
 	void init();
+	void initGraphics();
 	int grow();
 	int transport();
+	double effect(hormones& h); // used to change this part with a hormone
+	int winter();
 	void print();
-	void draw();
+	void draw(bool textured = true);
 	~tree();
 };
 #endif // TREE_H
